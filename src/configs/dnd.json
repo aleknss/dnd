@@ -1,0 +1,119 @@
+{
+  "classes": [
+    {
+      "name": "Bárbaro",
+      "ability": "Fuerza",
+      "description": [
+        "Los bárbaros son poderosos guerreros que se alimentan de las fuerzas primigenias del multiverso, que se manifiestan en forma de ira. Más que una mera emoción —y no limitada al enfado—, esta ira es la encarnación de la ferocidad de un depredador, la furia de una tormenta y la agitación del mar.",
+        "Algunos bárbaros personifican su furia como un espíritu feroz o un antepasado venerado. Otros la ven como una conexión con el dolor y la angustia del mundo, como una maraña impersonal de magia salvaje o como una expresión de su yo más profundo. Para todos los bárbaros, su furia es un poder que alimenta no solo su destreza en la batalla, sino también sus reflejos sobrenaturales y sus sentidos agudizados.",
+        "Los bárbaros suelen actuar como protectores y líderes en sus comunidades. Se lanzan de cabeza al peligro para que aquellos a quienes protegen no tengan que hacerlo. Su valentía ante el peligro hace que los bárbaros sean perfectos para la aventura."
+      ]
+    },
+    {
+      "name": "Bardo",
+      "ability": "Carisma",
+      "description": [
+        "Invocando la magia a través de la música, la danza y la poesía, los bardos son expertos en inspirar a los demás, aliviar el dolor, desanimar a los enemigos y crear ilusiones. Los bardos creen que el multiverso fue creado mediante la palabra y que los restos de sus Palabras de Creación aún resuenan y brillan en todos los planos de la existencia. La magia bárdica intenta aprovechar esas palabras, que trascienden cualquier idioma.",
+        "Cualquier cosa puede inspirar una nueva canción o cuento, por lo que los bardos se sienten fascinados por casi todo. Se convierten en maestros de muchas cosas, incluyendo la interpretación musical, la magia y la creación de bromas.",
+        "Los bardos pasan su vida viajando, recopilando conocimientos, contando historias y viviendo de la gratitud del público, al igual que cualquier otro artista. Pero la profundidad de sus conocimientos y su dominio de la magia los distingue del resto."
+      ]
+    },
+    {
+      "name": "Clérigo",
+      "ability": "Sabiduría",
+      "description": [
+        "Los clérigos obtienen su poder de los reinos de los dioses y lo aprovechan para obrar milagros. Bendecidos por una deidad, un panteón u otra entidad inmortal, los clérigos pueden acceder a la magia divina de los Planos Exteriores —donde moran los dioses— y canalizarla para ayudar a las personas y combatir a los enemigos.",
+        "Dado que su poder es un don divino, los clérigos suelen asociarse con templos dedicados a la deidad u otra fuerza inmortal que les ha otorgado su magia. Aprovechar la magia divina no requiere un entrenamiento específico, pero los clérigos pueden aprender oraciones y ritos que les ayudan a obtener poder de los Planos Exteriores.",
+        "No todos los miembros de un templo o santuario son clérigos. Algunos sacerdotes están llamados a una vida sencilla de servicio en el templo, llevando a cabo su devoción a través de la oración y los rituales, no a través de la magia. Muchos mortales afirman hablar en nombre de los dioses, pero pocos pueden manejar el poder de esos dioses como lo hace un clérigo."
+      ]
+    },
+    {
+      "name": "Druida",
+      "ability": "Sabiduría",
+      "description": [
+        "Los druidas pertenecen a antiguas órdenes que invocan las fuerzas de la naturaleza. Aprovechando la magia de los animales, las plantas y los cuatro elementos, los druidas curan, se transforman en animales y ejercen la destrucción elemental.",
+        "Reverenciando la naturaleza por encima de todo, los druidas obtienen su magia de la naturaleza, de una deidad natural o de ambas, y suelen unirse a otros druidas para realizar ritos que marcan el paso de las estaciones y otros ciclos naturales.",
+        "Los druidas se preocupan por el delicado equilibrio ecológico que sustenta la vida vegetal y animal y por la necesidad de que las personas vivan en armonía con la naturaleza. Los druidas suelen proteger lugares sagrados o vigilar regiones de naturaleza virgen, pero cuando surge un peligro importante, los druidas asumen un papel más activo como aventureros que combaten la amenaza."
+      ]
+    },
+    {
+      "name": "Guerrero",
+      "ability": "Fuerza o Destreza",
+      "description": [
+        "Los luchadores dominan muchos campos de batalla. Caballeros en busca de aventuras, campeones reales, soldados de élite y mercenarios curtidos: como luchadores, todos ellos comparten una destreza sin igual con las armas y las armaduras. Y están muy familiarizados con la muerte, tanto infligiéndola como desafiándola.",
+        "Los luchadores dominan diversas técnicas con las armas, y un luchador bien equipado siempre tiene a mano la herramienta adecuada para cualquier situación de combate. Del mismo modo, un luchador es experto en todo tipo de armaduras. Más allá de ese grado básico de familiaridad, cada luchador se especializa en determinados estilos de combate. Algunos se concentran en el tiro con arco, otros en luchar con dos armas a la vez y otros en aumentar sus habilidades marciales con magia. Esta combinación de amplia capacidad y extensa especialización convierte a los luchadores en combatientes superiores."
+      ]
+    },
+    {
+      "name": "Monje",
+      "ability": "Destreza y Sabiduría",
+      "description": [
+        "Los monjes utilizan un riguroso entrenamiento de combate y disciplina mental para alinearse con el multiverso y concentrar sus reservas internas de poder. Los diferentes monjes conceptualizan este poder de diversas maneras: como respiración, energía, fuerza vital, esencia o yo, por ejemplo. Ya sea canalizado como una impresionante demostración de destreza marcial o como una manifestación más sutil de defensa y velocidad, este poder impregna todo lo que hace un monje.",
+        "Los monjes concentran su poder interno para crear efectos extraordinarios, incluso sobrenaturales. Canalizan una velocidad y una fuerza sobrenaturales en sus ataques, con o sin el uso de armas. En manos de un monje, incluso las armas más básicas pueden convertirse en sofisticados instrumentos de dominio del combate.",
+        "Muchos monjes consideran que una vida estructurada de retiro ascético les ayuda a cultivar la concentración física y mental que necesitan para aprovechar su poder. Otros monjes creen que sumergirse en la vibrante confusión de la vida les ayuda a alimentar su determinación y disciplina.",
+        "Los monjes suelen considerar las aventuras como pruebas de su desarrollo físico y mental. Les impulsa el deseo de cumplir una misión más importante que la simple matanza de monstruos y el saqueo de tesoros; se esfuerzan por convertirse en armas vivientes."
+      ]
+    },
+    {
+      "name": "Paladín",
+      "ability": "Fuerza y Carisma",
+      "description": [
+        "Los paladines están unidos por su juramento de luchar contra las fuerzas de la aniquilación y la corrupción. Ya sea que lo hayan jurado ante el altar de un dios, en un claro sagrado ante los espíritus de la naturaleza o en un momento de desesperación y dolor con los muertos como únicos testigos, el juramento de un paladín es un vínculo poderoso. Es una fuente de poder que convierte a un guerrero devoto en un campeón bendito.",
+        "Los paladines se entrenan para aprender las habilidades del combate, dominando una variedad de armas y armaduras. Aun así, sus habilidades marciales son secundarias al poder mágico que ejercen: el poder de curar a los heridos, golpear a sus enemigos y proteger a los indefensos y a aquellos que luchan a su lado.",
+        "Casi por definición, la vida de un paladín es una vida de aventuras, ya que todos los paladines viven en primera línea de la lucha cósmica contra la aniquilación. Los luchadores son bastante raros entre las filas de los ejércitos del mundo, pero aún menos personas pueden afirmar tener la vocación de paladín. Cuando reciben la llamada, estas personas bendecidas abandonan sus antiguas ocupaciones y toman las armas y la magia."
+      ]
+    },
+    {
+      "name": "Explorador",
+      "ability": "Destreza y Sabiduría",
+      "description": [
+        "Lejos de las bulliciosas ciudades, entre los árboles de bosques sin caminos y a través de amplias llanuras, los exploradores mantienen su vigilancia incesante en la naturaleza salvaje. Los guardabosques aprenden a rastrear a sus presas como lo hacen los depredadores, moviéndose sigilosamente por la naturaleza y ocultándose entre la maleza y los escombros.",
+        "Gracias a su conexión con la naturaleza, los exploradores también pueden lanzar hechizos que aprovechan los poderes primigenios de la naturaleza. Los talentos y la magia de un guardabosques se perfeccionan con una concentración letal para proteger el mundo de los estragos de los monstruos y los tiranos."
+      ]
+    },
+    {
+      "name": "Pícaro",
+      "ability": "Destreza",
+      "description": [
+        "Los pícaros se valen de su astucia, sigilo y las vulnerabilidades de sus enemigos para sacar ventaja en cualquier situación. Tienen un don para encontrar la solución a casi cualquier problema. Algunos incluso aprenden trucos mágicos para complementar sus otras habilidades. Muchos pícaros se centran en el sigilo y el engaño, mientras que otros perfeccionan habilidades que les ayudan en entornos de mazmorras, como escalar, encontrar y desactivar trampas y abrir cerraduras.",
+        "En combate, los pícaros dan prioridad a los golpes sutiles sobre la fuerza bruta. Prefieren dar un golpe preciso que agotar al oponente con una lluvia de golpes.",
+        "Algunos pícaros comenzaron su carrera como delincuentes, mientras que otros utilizaron su astucia para luchar contra el crimen. Sea cual sea la relación de un pícaro con la ley, ningún delincuente común ni agente de la ley puede igualar la sutil brillantez de los mejores pícaros."
+      ]
+    },
+    {
+      "name": "Hechicero",
+      "ability": "Carisma",
+      "description": [
+        "Los hechiceros tienen una magia innata, conferida por una línea de sangre exótica, una influencia de otro mundo o la exposición a fuerzas cósmicas desconocidas.",
+        "Uno no puede estudiar hechicería como quien estudia un lenguaje, más de lo que uno puede aprender a vivir una vida legendaria.",
+        "Nadie elige la hechicería; el poder elige al hechicero."
+      ]
+    },
+    {
+      "name": "Brujo",
+      "ability": "Carisma",
+      "description": [
+        "Los brujos buscan el conocimiento que se esconde en el tejido del multiverso. A menudo comienzan su búsqueda del poder mágico profundizando en tomos de conocimientos prohibidos, incursionando en invocaciones destinadas a atraer el poder de seres extraplanares o buscando lugares de poder donde se pueda sentir la influencia de estos seres. En poco tiempo, cada brujo se ve envuelto en un pacto vinculante con un poderoso patrón. Aprovechando el antiguo conocimiento de seres como ángeles, archifey, demonios, diablos, brujas y entidades alienígenas del Reino Lejano, los brujos reúnen secretos arcanos para reforzar su propio poder.",
+        "Los brujos ven a sus patrones como recursos, como medios para alcanzar el poder mágico. Algunos brujos respetan, veneran o incluso aman a sus patronos; otros les sirven a regañadientes; y otros tratan de socavar a sus patronos incluso mientras ejercen el poder que estos les han otorgado.",
+        "Una vez hecho el pacto, la sed de conocimiento y poder de un brujo no puede saciarse con el mero estudio. La mayoría de los brujos pasan sus días buscando un mayor poder y un conocimiento más profundo, lo que normalmente implica algún tipo de aventura."
+      ]
+    },
+    {
+      "name": "Mago",
+      "ability": "Inteligencia",
+      "description": [
+        "Los magos se caracterizan por su exhaustivo estudio del funcionamiento interno de la magia. Lanzan hechizos de fuego explosivo, rayos en forma de arco, engaños sutiles y transformaciones espectaculares. Su magia conjura monstruos de otros planos de existencia, permite vislumbrar el futuro o forma barreras protectoras. Sus hechizos más poderosos transforman una sustancia en otra, invocan meteoritos del cielo o abren portales a otros mundos.",
+        "La mayoría de los magos comparten un enfoque académico de la magia. Examinan los fundamentos teóricos de la magia, en particular la categorización de los hechizos en escuelas de magia. Magos de renombre como Bigby, Tasha, Mordenkainen y Yolande se han basado en sus estudios para inventar hechizos icónicos que ahora se utilizan en todo el multiverso.",
+        "Lo más parecido a una vida normal que puede tener un mago es trabajar como sabio o conferenciante. Otros magos venden sus servicios como asesores, sirven en las fuerzas militares o se dedican a la delincuencia o la dominación. Pero el atractivo del conocimiento atrae incluso a los magos menos aventureros desde la seguridad de sus bibliotecas y laboratorios hacia ruinas derruidas y ciudades perdidas. La mayoría de los magos creen que sus homólogos de las civilizaciones antiguas conocían secretos de la magia que se han perdido con el paso del tiempo, y que descubrir esos secretos podría abrir el camino hacia un poder mayor que cualquier magia disponible en la era actual."
+      ]
+    },
+    {
+      "name": "Artífice",
+      "ability": "Inteligencia",
+      "description": [
+        "Maestros de la invención, los artífices utilizan su ingenio y magia para desbloquear capacidades extraordinarias en los objetos. Consideran la magia como un sistema complejo que espera ser descifrado y luego aprovechado en sus hechizos e inventos. En las siguientes secciones encontrarás todo lo que necesitas para interpretar a uno de estos inventores.",
+        "Los artífices utilizan una variedad de herramientas para canalizar su poder arcano. Para lanzar un hechizo, un artífice puede utilizar los suministros de un alquimista para crear un potente elixir, los suministros de un calígrafo para inscribir un sigilo de poder o las herramientas de un chapucero para fabricar un amuleto temporal. La magia de los artífices está ligada a sus herramientas y a su talento, y pocos personajes pueden fabricar la herramienta adecuada para un trabajo tan bien como un artífice."
+      ]
+    }
+  ]
+}
