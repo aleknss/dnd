@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Arrow } from "./svgs";
+import { RightArrow } from "./svgs";
 
 interface ClassPanelProps {
   id: string;
@@ -26,14 +26,16 @@ export default function ClassPanel({
         </div>
         <div className="flex flex-col gap-6">
           {description.map((pfs) => (
-            <p className="text-blue-primary font-ptsans text-xl ">{pfs}</p>
+            <p className="text-blue-primary font-ptsans text-xl text-justify">
+              {pfs}
+            </p>
           ))}
         </div>
         <Link
           to={`/classes/${id}`}
           className="bg-blue-primary hover:bg-blue-dark transition duration-300 w-fit p-3 rounded-xs text-dirty-white"
         >
-          <Arrow className="size-10" />
+          <RightArrow className="size-10" />
         </Link>
       </div>
     </div>

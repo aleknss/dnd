@@ -2,6 +2,7 @@ import ClassPanel from "../components/ClassPanel";
 import ClassHeader from "../Layout/ClassHeader";
 import { gallery } from "../assets/classgallery";
 import { useClasses } from "../contexts/ClassesContext";
+import { PageTitle } from "../hooks/PageTitle";
 
 const imgMap: Record<string, string> = {
   barbarian: gallery.barbarian,
@@ -21,6 +22,7 @@ const imgMap: Record<string, string> = {
 
 export default function Classes() {
   const { classes } = useClasses();
+  PageTitle("clases");
 
   return (
     <div>

@@ -1,4 +1,8 @@
+import { PageTitle } from "../hooks/PageTitle";
+
 export default function Home() {
+  PageTitle("home");
+
   return (
     <>
       <div>

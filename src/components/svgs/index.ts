@@ -1,4 +1,5 @@
-export * from "./Arrow";
+export * from "./RightArrow";
+export * from "./LeftArrow";
 export * from "./Art";
 export * from "./Axe";
 export * from "./Book";
