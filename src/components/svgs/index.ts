@@ -5,6 +5,7 @@ export * from "./Axe";
 export * from "./Book";
 export * from "./Bow";
 export * from "./Dagger";
+export * from "./Dice";
 export * from "./Fist";
 export * from "./Gear";
 export * from "./Grail";

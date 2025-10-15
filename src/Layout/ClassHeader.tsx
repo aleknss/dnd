@@ -15,6 +15,7 @@ import {
   YinYang,
 } from "../components/svgs";
 import { useClasses } from "../contexts/ClassesContext";
+import { useScrollTo } from "../hooks/useScrollTo";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   barbarian: Axe,
@@ -34,23 +35,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export default function ClassHeader() {
   const { classes } = useClasses();
-
-  const scrollTo = (elementId: string) => {
-    const targetElement = document.querySelector(elementId);
-    if (!targetElement) return;
-    const headerHeight = 128;
-    const elementPosition =
-      targetElement.getBoundingClientRect().top + window.scrollY;
-    const offsetPosition = elementPosition - headerHeight;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
-  };
+  const { scrollTo } = useScrollTo(128);
   return (
     <>
-      <div className="w-full h-16 flex flex-row justify-center gap-8 flex-wrap items-center bg-dirty-white sticky top-16">
+      <div className="w-full min-h-12 min-[1880px]:h-16 flex flex-row justify-center gap-4 flex-wrap items-center bg-dirty-white sticky top-16">
         {classes.map((cls) => {
           const IconComponent = iconMap[cls.id];
           return (

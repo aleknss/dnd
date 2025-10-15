@@ -26,7 +26,7 @@ export default function ClassPanel({
         </div>
         <div className="flex flex-col gap-6">
           {description.map((pfs) => (
-            <p className="text-blue-primary font-ptsans text-xl text-justify">
+            <p className="text-blue-primary font-ptsans text-lg text-justify">
               {pfs}
             </p>
           ))}
