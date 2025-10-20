@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { RightArrow } from "./svgs";
+import { RightArrow } from "./svgs/classes";
 
 interface ClassPanelProps {
   id: string;

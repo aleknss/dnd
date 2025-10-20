@@ -1,18 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Classes from "./pages/Classes";
 import Header from "./Layout/Header";
-import ClassPage from "./pages/ClassPage";
+import { Suspense, lazy } from "react";
 
 function App() {
+  const ClassPage = lazy(() => import("./pages/ClassPage"));
+  const Classes = lazy(() => import("./pages/Classes"));
+
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/classes" element={<Classes />} />
-        <Route path="/classes/:id" element={<ClassPage />} />
-      </Routes>
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/classes" element={<Classes />} />
+          <Route path="/classes/:id" element={<ClassPage />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

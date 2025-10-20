@@ -13,7 +13,7 @@ import {
   Tentacle,
   Tree,
   YinYang,
-} from "../components/svgs";
+} from "../components/svgs/classes";
 import { useClasses } from "../contexts/ClassesContext";
 import { useScrollTo } from "../hooks/useScrollTo";
 
