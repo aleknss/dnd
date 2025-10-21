@@ -61,7 +61,7 @@ export default function ClassPage() {
   ];
 
   return (
-    <div className="w-full p-10 flex-row flex gap-10">
+    <div className="w-full p-10 flex flex-row gap-10">
       <div
         id="content"
         className="flex flex-col gap-10 justify-center items-center"
@@ -86,7 +86,7 @@ export default function ClassPage() {
           <InfoTable data={infoTableData} />
         </div>
       </div>
-      <div id="indice" className="sticky top-0">
+      <div id="indice" className="sticky top-26 self-start h-fit">
         <div className="w-48 bg-dirty-white flex flex-col p-2.5 gap-2.5">
           <h2 className="text-red-secondary font-inknut text-xl text-center">
             Índice

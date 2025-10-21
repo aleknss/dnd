@@ -25,18 +25,20 @@ export default function Classes() {
   PageTitle("clases");
 
   return (
-    <div>
+    <div className="w-full">
       <ClassHeader />
-      {classes.map((cls) => (
-        <ClassPanel
-          key={cls.id}
-          id={cls.id}
-          name={cls.name}
-          image={imgMap[cls.id]}
-          description={cls.description}
-          ability={cls.ability}
-        />
-      ))}
+      <div className="flex flex-col w-full">
+        {classes.map((cls) => (
+          <ClassPanel
+            key={cls.id}
+            id={cls.id}
+            name={cls.name}
+            image={imgMap[cls.id]}
+            description={cls.description}
+            ability={cls.ability}
+          />
+        ))}
+      </div>
     </div>
   );
 }
