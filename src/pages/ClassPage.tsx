@@ -4,7 +4,12 @@ import { useClasses } from "../contexts/ClassesContext";
 import { IconButton } from "../components/Button";
 import { LeftArrow } from "../components/svgs/classes";
 import { D12 } from "../components/svgs/dices";
+import { useScrollTo } from "../hooks/useScrollTo";
 import InfoTable from "../components/InfoTable";
+import TraitsTable from "../components/TraitsTable";
+import Card from "../components/Card";
+import barbarianData from "../configs/barbarian.json";
+import barbarianIndex from "../assets/classes/barbarian/barbarian-index.jpg";
 
 export default function ClassPage() {
   PageTitle("clase");
@@ -12,6 +17,7 @@ export default function ClassPage() {
   const { id } = useParams<{ id: string }>();
   const { classes } = useClasses();
   const selectedClass = classes.find((cls) => cls.id === id);
+  const { scrollTo } = useScrollTo(64);
 
   if (!selectedClass) {
     return (
@@ -21,44 +27,49 @@ export default function ClassPage() {
     );
   }
 
-  const infoTableData = [
-    {
-      label: "Característica principal",
-      value: "Fuerza",
-    },
-    {
-      label: "Dado de puntos de golpe",
-      value: (
-        <div className="flex items-center gap-2">
-          <span className="text-red-secondary">
-            <D12 />
-          </span>
-          <span>1d12 de nivel de {selectedClass.name.toLowerCase()}</span>
-        </div>
-      ),
-    },
-    {
-      label: "Competencias en tiradas de salvación",
-      value: "Fuerza y Constitución",
-    },
-    {
-      label: "Competencias en habilidades",
-      value: "Armas sencillas y marciales",
-    },
-    {
-      label: "Competencias con armas",
-      value: "Armas sencillas y marciales",
-    },
-    {
-      label: "Entrenamiento con armaduras",
-      value: "Armaduras ligeras y medias y escudos",
-    },
-    {
-      label: "Equipo inicial",
-      value:
-        "Elige A o B: (A) hacha a dos manos, 4 hachas de mano, paquete de explorador y 15 po; o (B) 75 po",
-    },
-  ];
+  const isBarbarian =
+    selectedClass?.name.toLowerCase() === "bárbaro" ||
+    selectedClass?.name.toLowerCase() === "barbarian";
+
+  const infoTableData =
+    isBarbarian && barbarianData.info_table
+      ? barbarianData.info_table.map((item) => {
+          if (item.type === "dice" && item.dice_type === "D12") {
+            return {
+              label: item.label,
+              value: (
+                <div className="flex items-center gap-2">
+                  <span className="text-red-secondary">
+                    <D12 />
+                  </span>
+                  <span>{item.value}</span>
+                </div>
+              ),
+            };
+          } else {
+            return {
+              label: item.label,
+              value: item.value,
+            };
+          }
+        })
+      : [
+          {
+            label: "Error",
+            value: "No se encuentra la información",
+          },
+        ];
+
+  const traitsData = isBarbarian
+    ? barbarianData.progresion_por_nivel.map((nivel) => ({
+        nivel: nivel.nivel,
+        bonificador_por_competencia: nivel.bonificador_por_competencia,
+        rasgos: nivel.rasgos.map((rasgo) => rasgo.nombre).join(", "),
+        furias: nivel.furias.usos_por_descanso,
+        daño_por_furia: nivel.furias.daño_adicional,
+        maestria_con_armas: nivel.maestria_con_armas,
+      }))
+    : [];
 
   return (
     <div className="w-full p-10 flex flex-row gap-10">
@@ -82,16 +93,101 @@ export default function ClassPage() {
             </p>
           ))}
         </div>
-        <div className="w-full">
-          <InfoTable data={infoTableData} />
-        </div>
+        {isBarbarian ? (
+          <div className="w-full flex flex-col gap-12">
+            <div className="flex flex-col lg:flex-row gap-5">
+              <div className="md:w-auto shrink-0">
+                <InfoTable data={infoTableData} />
+              </div>
+              <div id="traits" className="flex flex-col">
+                <h2 className="text-2xl font-inknut text-blue-dark">Rasgos</h2>
+                <div className="flex flex-col gap-4 mt-4">
+                  {(() => {
+                    const cards = [];
+                    let count = 0;
+
+                    for (const nivel of barbarianData.progresion_por_nivel) {
+                      for (const rasgo of nivel.rasgos) {
+                        if (nivel.nivel > 1) break;
+                        cards.push(
+                          <Card
+                            key={`${nivel.nivel}-${count}`}
+                            title={`${rasgo.nombre} (Nivel ${nivel.nivel})`}
+                          >
+                            <p className="text-sm text-blue-primary">
+                              {rasgo.descripcion}
+                            </p>
+                          </Card>
+                        );
+                        count++;
+                      }
+                      if (nivel.nivel > 1) break;
+                    }
+
+                    return cards;
+                  })()}
+                </div>
+              </div>
+            </div>
+            <div className="flex-1 min-w-0">
+              <TraitsTable
+                data={traitsData}
+                columns={[
+                  {
+                    key: "nivel",
+                    header: "Nivel",
+                  },
+                  {
+                    key: "bonificador_por_competencia",
+                    header: "Bonificación por competencia",
+                  },
+                  {
+                    key: "rasgos",
+                    header: "Rasgos",
+                  },
+                  {
+                    key: "furias",
+                    header: "Furias",
+                  },
+                  {
+                    key: "daño_por_furia",
+                    header: "Daño por furia",
+                  },
+                  {
+                    key: "maestria_con_armas",
+                    header: "Maestría con armas",
+                  },
+                ]}
+                className="w-full"
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="w-full">
+            <InfoTable data={infoTableData} />
+          </div>
+        )}
       </div>
-      <div id="indice" className="sticky top-26 self-start h-fit">
-        <div className="w-48 bg-dirty-white flex flex-col p-2.5 gap-2.5">
+      <div
+        id="indice"
+        className="sticky top-26 self-start h-fit hidden lg:flex flex-col gap-10"
+      >
+        <div className="w-48 bg-dirty-white rounded-sm flex flex-col p-2.5 gap-2.5">
           <h2 className="text-red-secondary font-inknut text-xl text-center">
             Índice
           </h2>
+          <a
+            onClick={() => scrollTo(`#traits`)}
+            className="font-inknut underline text-xl hover:bg-zinc-300 hover:cursor-pointer rounded-sm p-1"
+          >
+            Rasgos
+          </a>
         </div>
+        <img
+          src={barbarianIndex}
+          className="rounded-sm"
+          alt="barbarian-index"
+        />
       </div>
     </div>
   );

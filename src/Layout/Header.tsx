@@ -5,7 +5,7 @@ import { Dnd } from "../components/svgs/Dnd";
 export default function Header() {
   return (
     <>
-      <div className="w-full bg-blue-primary h-16 flex flex-row justify-center items-center gap-8 sticky top-0">
+      <div className="w-full bg-blue-primary h-16 flex flex-row justify-center items-center gap-8 sticky top-0 z-10">
         <HeaderButton to="/classes" label="Clases" />
         <Link
           className="text-dirty-white hover:text-blue-light transition duration-200"

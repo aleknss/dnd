@@ -1,5 +1,5 @@
 import React from "react";
-import barbarianEquipment from "../assets/barbarian-equipment.jpg";
+import barbarianEquipment from "../assets/classes/barbarian/barbarian-equipment.jpg";
 
 interface InfoTableProps {
   data: Array<{
@@ -10,7 +10,7 @@ interface InfoTableProps {
 
 export default function InfoTable({ data }: InfoTableProps) {
   return (
-    <div className="w-[640px] bg-dirty-white px-2.5 rounded-sm">
+    <div className="w-[640px] bg-dirty-white p-2.5 rounded-sm">
       {data.map((item, index) => (
         <div
           key={index}
