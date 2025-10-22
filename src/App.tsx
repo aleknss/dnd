@@ -12,9 +12,9 @@ function App() {
       <Header />
       <Suspense fallback={<div>Cargando...</div>}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/classes" element={<Classes />} />
-          <Route path="/classes/:id" element={<ClassPage />} />
+          <Route path="/dnd/" element={<Home />} />
+          <Route path="/dnd/classes" element={<Classes />} />
+          <Route path="/dnd/classes/:id" element={<ClassPage />} />
         </Routes>
       </Suspense>
     </>

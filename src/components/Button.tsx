@@ -49,7 +49,7 @@ export function IconButton({ to, icon: Icon, label, classProp }: ButtonProps) {
       className={`flex flex-row items-center justify-center gap-2 rounded-xs bg-blue-primary hover:bg-blue-dark transition duration-300 px-4 py-2 text-dirty-white font-ptsans cursor-pointer ${classProp}`}
     >
       {Icon && <Icon className="size-6" />}
-      <span>{label}</span>
+      <span className="hidden md:inline">{label}</span>
     </Link>
   );
 }

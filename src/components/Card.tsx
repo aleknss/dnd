@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ title, children, className = "" }) => {
       <div className="bg-blue-primary text-white p-3">
         <h3 className="font-inknut text-lg">{title}</h3>
       </div>
-      <div className="p-4 whitespace-pre-line">{children}</div>
+      <div className="p-4 whitespace-pre-line text-justify">{children}</div>
     </div>
   );
 };

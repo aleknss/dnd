@@ -55,9 +55,11 @@ export default function ClassPanel({
         {infoTableData && infoTableData.length > 0 && (
           <div className="bg-dirty-white p-4 rounded-sm">
             {infoTableData.map((item, index) => (
-              <div 
-                key={index} 
-                className={`grid grid-cols-12 py-3 ${index % 2 === 1 ? "bg-white rounded-md" : ""}`}
+              <div
+                key={index}
+                className={`grid grid-cols-12 py-3 ${
+                  index % 2 === 1 ? "bg-white rounded-md" : ""
+                }`}
               >
                 <div className="col-span-5 flex items-center">
                   <p className="font-inknut text-blue-dark">{item.label}</p>
@@ -70,7 +72,7 @@ export default function ClassPanel({
           </div>
         )}
         <Link
-          to={`/classes/${id}`}
+          to={`/dnd/classes/${id}`}
           className="bg-blue-primary hover:bg-blue-dark transition duration-300 w-full flex justify-center md:w-fit p-3 rounded-xs text-dirty-white"
         >
           <RightArrow className="size-8 md:size-10" />

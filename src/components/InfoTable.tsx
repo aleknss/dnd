@@ -10,7 +10,7 @@ interface InfoTableProps {
 
 export default function InfoTable({ data }: InfoTableProps) {
   return (
-    <div className="w-[640px] bg-dirty-white p-2.5 rounded-sm">
+    <div className="max-w-[640px] bg-dirty-white p-2.5 rounded-sm">
       {data.map((item, index) => (
         <div
           key={index}

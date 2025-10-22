@@ -72,7 +72,7 @@ export default function ClassPage() {
     : [];
 
   return (
-    <div className="w-full p-10 flex flex-row gap-10">
+    <div className="w-full p-10 flex flex-col md:flex-row gap-10">
       <div
         id="content"
         className="flex flex-col gap-10 justify-center items-center"
@@ -95,37 +95,39 @@ export default function ClassPage() {
         </div>
         {isBarbarian ? (
           <div className="w-full flex flex-col gap-12">
-            <div className="flex flex-col lg:flex-row gap-5">
-              <div className="md:w-auto shrink-0">
+            <div className="flex flex-col 2xl:flex-row gap-5">
+              <div className="md:w-auto m-auto shrink-0">
                 <InfoTable data={infoTableData} />
               </div>
               <div id="traits" className="flex flex-col">
                 <h2 className="text-2xl font-inknut text-blue-dark">Rasgos</h2>
                 <div className="flex flex-col gap-4 mt-4">
-                  {(() => {
-                    const cards = [];
-                    let count = 0;
-
-                    for (const nivel of barbarianData.progresion_por_nivel) {
-                      for (const rasgo of nivel.rasgos) {
-                        if (nivel.nivel > 1) break;
-                        cards.push(
-                          <Card
-                            key={`${nivel.nivel}-${count}`}
-                            title={`${rasgo.nombre} (Nivel ${nivel.nivel})`}
-                          >
-                            <p className="text-sm text-blue-primary">
-                              {rasgo.descripcion}
-                            </p>
-                          </Card>
-                        );
-                        count++;
-                      }
-                      if (nivel.nivel > 1) break;
-                    }
-
-                    return cards;
-                  })()}
+                  {barbarianData.progresion_por_nivel
+                    .filter((nivel) => nivel.nivel === 1)
+                    .map((nivel) => (
+                      <div key={`nivel-${nivel.nivel}`}>
+                        <h2 className="text-xl font-inknut text-blue-dark mt-4">
+                          Nivel {nivel.nivel}
+                        </h2>
+                        <div className="flex flex-col md:flex-row flex-wrap gap-4 mt-4">
+                          {nivel.rasgos.map((rasgo, index) => (
+                            <Card
+                              key={`trait-${nivel.nivel}-${index}`}
+                              title={`${rasgo.nombre}`}
+                              className={
+                                nivel.rasgos.length === 1
+                                  ? "md:w-full"
+                                  : "md:w-[calc(50%-1rem)]"
+                              }
+                            >
+                              <p className="text-sm text-blue-primary">
+                                {rasgo.descripcion}
+                              </p>
+                            </Card>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
@@ -167,6 +169,36 @@ export default function ClassPage() {
             <InfoTable data={infoTableData} />
           </div>
         )}
+
+        {barbarianData.progresion_por_nivel
+          .filter((nivel) => nivel.nivel > 1)
+          .map((nivel) => (
+            <div
+              key={`nivel-${nivel.nivel}`}
+              className="w-full flex flex-col gap-5"
+            >
+              <h2 className="text-xl font-inknut text-blue-primary">
+                Nivel {nivel.nivel}
+              </h2>
+              <div className="flex flex-col md:flex-row flex-wrap gap-4">
+                {nivel.rasgos.map((rasgo, index) => (
+                  <Card
+                    key={`trait-${nivel.nivel}-${index}`}
+                    title={`${rasgo.nombre}`}
+                    className={
+                      nivel.rasgos.length === 1
+                        ? "md:w-full"
+                        : "md:w-[calc(50%-1rem)]"
+                    }
+                  >
+                    <p className="text-sm text-blue-primary">
+                      {rasgo.descripcion}
+                    </p>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          ))}
       </div>
       <div
         id="indice"
