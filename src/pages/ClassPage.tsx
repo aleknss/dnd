@@ -3,7 +3,7 @@ import { PageTitle } from "../hooks/PageTitle";
 import { useClasses } from "../contexts/ClassesContext";
 import { IconButton } from "../components/Button";
 import { LeftArrow } from "../components/svgs/classes";
-import { D12 } from "../components/svgs/dices";
+import { D6, D8, D10, D12 } from "../components/svgs/dices";
 import { useScrollTo } from "../hooks/useScrollTo";
 import InfoTable from "../components/InfoTable";
 import TraitsTable from "../components/TraitsTable";
@@ -13,7 +13,6 @@ import barbarianIndex from "../assets/classes/barbarian/barbarian-index.jpg";
 
 export default function ClassPage() {
   PageTitle("clase");
-
   const { id } = useParams<{ id: string }>();
   const { classes } = useClasses();
   const selectedClass = classes.find((cls) => cls.id === id);
@@ -27,49 +26,68 @@ export default function ClassPage() {
     );
   }
 
-  const isBarbarian =
-    selectedClass?.name.toLowerCase() === "bárbaro" ||
-    selectedClass?.name.toLowerCase() === "barbarian";
+  const subclases = barbarianData.subclases;
 
-  const infoTableData =
-    isBarbarian && barbarianData.info_table
-      ? barbarianData.info_table.map((item) => {
-          if (item.type === "dice" && item.dice_type === "D12") {
-            return {
-              label: item.label,
-              value: (
-                <div className="flex items-center gap-2">
-                  <span className="text-red-secondary">
-                    <D12 />
-                  </span>
-                  <span>{item.value}</span>
-                </div>
-              ),
-            };
-          } else {
-            return {
-              label: item.label,
-              value: item.value,
-            };
+  {
+    /*Información tabla básicos */
+  }
+  const infoTableData = barbarianData.info_table
+    ? barbarianData.info_table.map((item) => {
+        if (item.type === "dice") {
+          let DiceComponent;
+          switch (item.dice_type) {
+            case "D6":
+              DiceComponent = D6;
+              break;
+            case "D8":
+              DiceComponent = D8;
+              break;
+            case "D10":
+              DiceComponent = D10;
+              break;
+            case "D12":
+              DiceComponent = D12;
+              break;
+            default:
+              DiceComponent = D6;
           }
-        })
-      : [
-          {
-            label: "Error",
-            value: "No se encuentra la información",
-          },
-        ];
 
-  const traitsData = isBarbarian
-    ? barbarianData.progresion_por_nivel.map((nivel) => ({
-        nivel: nivel.nivel,
-        bonificador_por_competencia: nivel.bonificador_por_competencia,
-        rasgos: nivel.rasgos.map((rasgo) => rasgo.nombre).join(", "),
-        furias: nivel.furias.usos_por_descanso,
-        daño_por_furia: nivel.furias.daño_adicional,
-        maestria_con_armas: nivel.maestria_con_armas,
-      }))
-    : [];
+          return {
+            label: item.label,
+            value: (
+              <div className="flex items-center gap-2">
+                <span className="text-red-secondary w-6 h-6 flex items-center justify-center">
+                  <DiceComponent className="w-full h-full max-w-[16px] max-h-[16px] object-contain" />
+                </span>
+                <span>{item.value}</span>
+              </div>
+            ),
+          };
+        } else {
+          return {
+            label: item.label,
+            value: item.value,
+          };
+        }
+      })
+    : [
+        {
+          label: "Error",
+          value: "No se encuentra la información",
+        },
+      ];
+
+  {
+    /*Información tabla rasgos */
+  }
+  const traitsData = barbarianData.progresion_por_nivel.map((nivel) => ({
+    nivel: nivel.nivel,
+    bonificador_por_competencia: nivel.bonificador_por_competencia,
+    rasgos: nivel.rasgos.map((rasgo) => rasgo.nombre).join(", "),
+    furias: nivel.furias.usos_por_descanso,
+    daño_por_furia: nivel.furias.daño_adicional,
+    maestria_con_armas: nivel.maestria_con_armas,
+  }));
 
   return (
     <div className="w-full p-10 flex flex-col md:flex-row gap-10">
@@ -93,7 +111,7 @@ export default function ClassPage() {
             </p>
           ))}
         </div>
-        {isBarbarian ? (
+        {
           <div className="w-full flex flex-col gap-12">
             <div className="flex flex-col 2xl:flex-row gap-5">
               <div className="md:w-auto m-auto shrink-0">
@@ -101,29 +119,27 @@ export default function ClassPage() {
               </div>
               <div id="traits" className="flex flex-col">
                 <h2 className="text-2xl font-inknut text-blue-dark">Rasgos</h2>
-                <div className="flex flex-col gap-4 mt-4">
+                <div className="flex flex-col mt-4">
                   {barbarianData.progresion_por_nivel
                     .filter((nivel) => nivel.nivel === 1)
                     .map((nivel) => (
                       <div key={`nivel-${nivel.nivel}`}>
-                        <h2 className="text-xl font-inknut text-blue-dark mt-4">
+                        <h3 className="text-xl font-inknut text-red-secondary mt-4">
                           Nivel {nivel.nivel}
-                        </h2>
+                        </h3>
                         <div className="flex flex-col md:flex-row flex-wrap gap-4 mt-4">
                           {nivel.rasgos.map((rasgo, index) => (
-                            <Card
+                            <div
                               key={`trait-${nivel.nivel}-${index}`}
-                              title={`${rasgo.nombre}`}
-                              className={
-                                nivel.rasgos.length === 1
-                                  ? "md:w-full"
-                                  : "md:w-[calc(50%-1rem)]"
-                              }
+                              className="md:w-full"
                             >
-                              <p className="text-sm text-blue-primary">
+                              <h3 className=" text-blue-primary font-inknut">
+                                {rasgo.nombre}
+                              </h3>
+                              <p className=" text-blue-primary whitespace-pre-line text-justify">
                                 {rasgo.descripcion}
                               </p>
-                            </Card>
+                            </div>
                           ))}
                         </div>
                       </div>
@@ -164,11 +180,7 @@ export default function ClassPage() {
               />
             </div>
           </div>
-        ) : (
-          <div className="w-full">
-            <InfoTable data={infoTableData} />
-          </div>
-        )}
+        }
 
         {barbarianData.progresion_por_nivel
           .filter((nivel) => nivel.nivel > 1)
@@ -177,29 +189,42 @@ export default function ClassPage() {
               key={`nivel-${nivel.nivel}`}
               className="w-full flex flex-col gap-5"
             >
-              <h2 className="text-xl font-inknut text-blue-primary">
+              <h2 className="text-xl font-inknut text-red-secondary">
                 Nivel {nivel.nivel}
               </h2>
               <div className="flex flex-col md:flex-row flex-wrap gap-4">
                 {nivel.rasgos.map((rasgo, index) => (
-                  <Card
+                  <div
                     key={`trait-${nivel.nivel}-${index}`}
-                    title={`${rasgo.nombre}`}
-                    className={
+                    className={` ${
                       nivel.rasgos.length === 1
-                        ? "md:w-full"
+                        ? "md:w-full "
                         : "md:w-[calc(50%-1rem)]"
-                    }
+                    }`}
                   >
-                    <p className="text-sm text-blue-primary">
+                    <h3 className="text-blue-primary font-inknut">
+                      {rasgo.nombre}
+                    </h3>
+                    <p className="text-blue-primary whitespace-pre-line">
                       {rasgo.descripcion}
                     </p>
-                  </Card>
+                  </div>
                 ))}
               </div>
             </div>
           ))}
+        <div>
+          {subclases.map((subclase, index) => (
+            <div id={`subclase-${index}`}>
+              <h2 className="text-2xl font-inknut text-blue-dark">
+                {index + 1}. {subclase.nombre}
+              </h2>
+              <p>{subclase.descripcion}</p>
+            </div>
+          ))}
+        </div>
       </div>
+
       <div
         id="indice"
         className="sticky top-26 self-start h-fit hidden lg:flex flex-col gap-10"
@@ -210,16 +235,21 @@ export default function ClassPage() {
           </h2>
           <a
             onClick={() => scrollTo(`#traits`)}
-            className="font-inknut underline text-xl hover:bg-zinc-300 hover:cursor-pointer rounded-sm p-1"
+            className="font-inknut underline text-blue-primary hover:bg-zinc-300 hover:cursor-pointer rounded-sm p-1"
           >
             Rasgos
           </a>
+          {subclases.map((subclase, index) => (
+            <a
+              key={`indice-subclase-${index}`}
+              onClick={() => scrollTo(`#subclase-${index}`)}
+              className="font-inknut underline text-blue-primary hover:bg-zinc-300 hover:cursor-pointer rounded-sm p-1"
+            >
+              {index + 1}. {subclase.nombre}
+            </a>
+          ))}
         </div>
-        <img
-          src={barbarianIndex}
-          className="rounded-sm"
-          alt="barbarian-index"
-        />
+        <img src={barbarianIndex} className="rounded-sm" alt="index" />
       </div>
     </div>
   );
