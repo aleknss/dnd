@@ -6,16 +6,9 @@ export const useScrollTo = (defaultHeaderHeight: number = 128) => {
       const targetElement = document.querySelector(elementId);
       if (!targetElement) return;
 
-      const classHeader = document.querySelector(
-        ".bg-dirty-white.sticky"
-      ) as HTMLElement;
-      const actualHeaderHeight = classHeader
-        ? classHeader.offsetHeight
-        : defaultHeaderHeight;
-
       const elementPosition =
         targetElement.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - actualHeaderHeight;
+      const offsetPosition = elementPosition - defaultHeaderHeight;
 
       window.scrollTo({
         top: offsetPosition,

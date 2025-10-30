@@ -7,9 +7,10 @@ import { D6, D8, D10, D12 } from "../components/svgs/dices";
 import { useScrollTo } from "../hooks/useScrollTo";
 import InfoTable from "../components/InfoTable";
 import TraitsTable from "../components/TraitsTable";
-import Card from "../components/Card";
 import barbarianData from "../configs/barbarian.json";
 import barbarianIndex from "../assets/classes/barbarian/barbarian-index.jpg";
+import { Subclass } from "../components/svgs/Subclass";
+import { PiPlusCircleBold } from "react-icons/pi";
 
 export default function ClassPage() {
   PageTitle("clase");
@@ -88,6 +89,17 @@ export default function ClassPage() {
     daño_por_furia: nivel.furias.daño_adicional,
     maestria_con_armas: nivel.maestria_con_armas,
   }));
+
+  const traitsTitles = (type: string) => {
+    switch (type) {
+      case "Subclass":
+        return <Subclass />;
+      case "ASI":
+        return <PiPlusCircleBold />;
+      default:
+        "";
+    }
+  };
 
   return (
     <div className="w-full p-10 flex flex-col md:flex-row gap-10">
@@ -196,13 +208,15 @@ export default function ClassPage() {
                 {nivel.rasgos.map((rasgo, index) => (
                   <div
                     key={`trait-${nivel.nivel}-${index}`}
-                    className={` ${
+                    className={`flex flex-col gap-1 ${
                       nivel.rasgos.length === 1
-                        ? "md:w-full "
+                        ? "md:w-full"
                         : "md:w-[calc(50%-1rem)]"
                     }`}
                   >
-                    <h3 className="text-blue-primary font-inknut">
+                    <h3 className="text-blue-primary font-inknut flex gap-1 items-center">
+                      {traitsTitles(rasgo.type || "")}
+                      {}
                       {rasgo.nombre}
                     </h3>
                     <p className="text-blue-primary whitespace-pre-line">
@@ -217,9 +231,33 @@ export default function ClassPage() {
           {subclases.map((subclase, index) => (
             <div id={`subclase-${index}`}>
               <h2 className="text-2xl font-inknut text-blue-dark">
-                {index + 1}. {subclase.nombre}
+                {subclase.nombre}
               </h2>
-              <p>{subclase.descripcion}</p>
+              <p className="font-ptsans text-blue-primary">
+                {subclase.descripcion}
+              </p>
+              {subclase.progresion.map((progresion) => (
+                <div>
+                  <h3>Nivel {progresion.nivel}</h3>
+                  {progresion.rasgos.map((rasgo, index) => (
+                    <div
+                      key={`trait-${progresion.nivel}-${index}`}
+                      className={`flex flex-col gap-1 ${
+                        progresion.rasgos.length === 1
+                          ? "md:w-full"
+                          : "md:w-[calc(50%-1rem)]"
+                      }`}
+                    >
+                      <h3 className="text-blue-primary font-inknut flex gap-1 items-center">
+                        {rasgo.nombre}
+                      </h3>
+                      <p className="text-blue-primary whitespace-pre-line">
+                        {rasgo.descripcion}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           ))}
         </div>
@@ -245,7 +283,7 @@ export default function ClassPage() {
               onClick={() => scrollTo(`#subclase-${index}`)}
               className="font-inknut underline text-blue-primary hover:bg-zinc-300 hover:cursor-pointer rounded-sm p-1"
             >
-              {index + 1}. {subclase.nombre}
+              {subclase.nombre}
             </a>
           ))}
         </div>

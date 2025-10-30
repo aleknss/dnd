@@ -238,7 +238,8 @@
       "rasgos": [
         {
           "nombre": "Subclase de Bárbaro",
-          "descripcion": "Ganas una subclase de Bárbaro de tu elección de la lista de 'subclases'. Una subclase es una especialización que te otorga rasgos en ciertos niveles. Por el resto de tu carrera, obtienes cada uno de los rasgos de tu subclase que sean de tu nivel de Bárbaro o inferior."
+          "descripcion": "Ganas una subclase de Bárbaro de tu elección de la lista de 'subclases'. Una subclase es una especialización que te otorga rasgos en ciertos niveles. Por el resto de tu carrera, obtienes cada uno de los rasgos de tu subclase que sean de tu nivel de Bárbaro o inferior.",
+          "type": "Subclass"
         },
         {
           "nombre": "Conocimiento Primigenio",
@@ -258,7 +259,8 @@
       "rasgos": [
         {
           "nombre": "Mejora de Puntuación de Característica",
-          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques. Ganas este rasgo de nuevo en los niveles 8, 12 y 16."
+          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques. Ganas este rasgo de nuevo en los niveles 8, 12 y 16.",
+          "type": "ASI"
         }
       ]
     },
@@ -294,7 +296,8 @@
       "rasgos": [
         {
           "nombre": "Rasgo de Subclase",
-          "descripcion": "Ganas un rasgo de tu subclase de Bárbaro, detallado en la sección 'subclases'."
+          "descripcion": "Ganas un rasgo de tu subclase de Bárbaro, detallado en la sección 'subclases'.",
+          "type": "Subclass"
         }
       ]
     },
@@ -330,7 +333,8 @@
       "rasgos": [
         {
           "nombre": "Mejora de Puntuación de Característica",
-          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques."
+          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques.",
+          "type": "ASI"
         }
       ]
     },
@@ -362,7 +366,8 @@
       "rasgos": [
         {
           "nombre": "Rasgo de Subclase",
-          "descripcion": "Ganas un rasgo de tu subclase de Bárbaro."
+          "descripcion": "Ganas un rasgo de tu subclase de Bárbaro.",
+          "type": "Subclass"
         }
       ]
     },
@@ -394,7 +399,8 @@
       "rasgos": [
         {
           "nombre": "Mejora de Puntuación de Característica",
-          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques."
+          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques.",
+          "type": "ASI"
         }
       ]
     },
@@ -426,7 +432,8 @@
       "rasgos": [
         {
           "nombre": "Rasgo de Subclase",
-          "descripcion": "Ganas un rasgo de tu subclase de Bárbaro, detallado en la sección 'subclases'."
+          "descripcion": "Ganas un rasgo de tu subclase de Bárbaro, detallado en la sección 'subclases'.",
+          "type": "Subclass"
         }
       ]
     },
@@ -458,7 +465,8 @@
       "rasgos": [
         {
           "nombre": "Mejora de Puntuación de Característica",
-          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques."
+          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques.",
+          "type": "ASI"
         }
       ]
     },
