@@ -13,13 +13,14 @@ import { Subclass } from "../components/svgs/Subclass";
 import { PiPlusCircleBold } from "react-icons/pi";
 
 export default function ClassPage() {
-  PageTitle("clase");
   const { id } = useParams<{ id: string }>();
+  PageTitle(id || "not found");
   const { classes } = useClasses();
   const selectedClass = classes.find((cls) => cls.id === id);
   const { scrollTo } = useScrollTo(64);
 
   if (!selectedClass) {
+    PageTitle("not found");
     return (
       <div className="container mx-auto p-4">
         <h1>Clase no encontrada</h1>
@@ -118,7 +119,7 @@ export default function ClassPage() {
         </h1>
         <div className="flex flex-col gap-6">
           {selectedClass.description.map((paragraph, index) => (
-            <p className="text-blue-primary" key={index}>
+            <p className="text-blue-primary whitespace-pre-line" key={index}>
               {paragraph}
             </p>
           ))}
@@ -228,38 +229,66 @@ export default function ClassPage() {
             </div>
           ))}
         <div>
-          {subclases.map((subclase, index) => (
-            <div id={`subclase-${index}`}>
-              <h2 className="text-2xl font-inknut text-blue-dark">
-                {subclase.nombre}
-              </h2>
-              <p className="font-ptsans text-blue-primary">
-                {subclase.descripcion}
-              </p>
-              {subclase.progresion.map((progresion) => (
-                <div>
-                  <h3>Nivel {progresion.nivel}</h3>
-                  {progresion.rasgos.map((rasgo, index) => (
-                    <div
-                      key={`trait-${progresion.nivel}-${index}`}
-                      className={`flex flex-col gap-1 ${
-                        progresion.rasgos.length === 1
-                          ? "md:w-full"
-                          : "md:w-[calc(50%-1rem)]"
-                      }`}
-                    >
-                      <h3 className="text-blue-primary font-inknut flex gap-1 items-center">
-                        {rasgo.nombre}
-                      </h3>
-                      <p className="text-blue-primary whitespace-pre-line">
-                        {rasgo.descripcion}
-                      </p>
-                    </div>
-                  ))}
+          {subclases.map((subclase, index) => {
+            const imagePath = new URL(
+              `../assets/classes/barbarian/${subclase.id}.jpg`,
+              import.meta.url
+            ).href;
+
+            return (
+              <div id={`subclase-${index}`} key={`subclase-${index}`}>
+                <h2 className="text-2xl font-inknut text-blue-dark">
+                  {subclase.nombre}
+                </h2>
+                <div className="flex flex-col gap-4">
+                  <div>
+                    <img
+                      src={imagePath}
+                      className="w-full max-w-[300px] h-auto rounded-sm my-4"
+                      alt={subclase.nombre}
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = "none";
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <p className="font-ptsans text-blue-primary whitespace-pre-line">
+                      {subclase.descripcion}
+                    </p>
+                    {subclase.progresion.map((progresion) => (
+                      <div
+                        key={`progression-${progresion.nivel}`}
+                        className="w-full flex flex-col gap-5"
+                      >
+                        <h2 className="text-xl font-inknut text-red-secondary">
+                          Nivel {progresion.nivel}
+                        </h2>
+                        <div className="flex flex-col md:flex-row flex-wrap gap-4">
+                          {progresion.rasgos.map((rasgo, idx) => (
+                            <div
+                              key={`trait-${progresion.nivel}-${idx}`}
+                              className={`flex flex-col gap-1 ${
+                                progresion.rasgos.length === 1
+                                  ? "md:w-full"
+                                  : "md:w-[calc(50%-1rem)]"
+                              }`}
+                            >
+                              <h3 className="text-blue-primary font-inknut flex gap-1 items-center">
+                                {rasgo.nombre}
+                              </h3>
+                              <p className="text-blue-primary whitespace-pre-line">
+                                {rasgo.descripcion}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
 
