@@ -43,7 +43,7 @@
     {
       "id": "berserk",
       "nombre": "Camino del Berserker",
-      "descripcion": "Canaliza la Furia en una Violencia Desenfrenada\\n\\nLos bárbaros que siguen el Camino del Berserker dirigen su Furia principalmente hacia la violencia. Su camino es de furia desatada, y disfrutan del caos de la batalla mientras permiten que su Furia se apodere de ellos y los empodere.",
+      "descripcion": "Canaliza la Furia en una Violencia Desenfrenada. Los bárbaros que siguen el Camino del Berserker dirigen su Furia principalmente hacia la violencia. Su camino es de furia desatada, y disfrutan del caos de la batalla mientras permiten que su Furia se apodere de ellos y los empodere.",
       "progresion": [
         {
           "nivel": 3,
@@ -68,7 +68,7 @@
           "rasgos": [
             {
               "nombre": "Presencia Intimidante",
-              "descripcion": "Como una Acción Bonificación, puedes infundir terror en otros con tu presencia amenazante y poder primigenio. Cuando lo haces, cada criatura de tu elección en una Emisión de 30 pies que se origine en ti debe hacer una tirada de salvación de Sabiduría (CD 8 + tu modificador de Fuerza + Bonificador de Competencia). Si falla la salvación, una criatura obtiene la condición de Asustado durante 1 minuto. Al final de cada uno de los turnos de la criatura Asustada, repite la salvación, terminando el efecto en sí misma si tiene éxito.\\n\\nUna vez que usas esta característica, no puedes volver a usarla hasta que termines un Descanso Largo, a menos que gastes un uso de tu Furia (no se requiere acción) para restaurar su uso."
+              "descripcion": "Como una Acción Bonificación, puedes infundir terror en otros con tu presencia amenazante y poder primigenio. Cuando lo haces, cada criatura de tu elección en una Emisión de 30 pies que se origine en ti debe hacer una tirada de salvación de Sabiduría (CD 8 + tu modificador de Fuerza + Bonificador de Competencia). Si falla la salvación, una criatura obtiene la condición de Asustado durante 1 minuto. Al final de cada uno de los turnos de la criatura Asustada, repite la salvación, terminando el efecto en sí misma si tiene éxito.\n\nUna vez que usas esta característica, no puedes volver a usarla hasta que termines un Descanso Largo, a menos que gastes un uso de tu Furia (no se requiere acción) para restaurar su uso."
             }
           ]
         }
@@ -77,18 +77,18 @@
     {
       "id": "wildheart",
       "nombre": "Camino del Corazón Salvaje",
-      "descripcion": "Camina en Comunidad con el Mundo Animal\\n\\nLos bárbaros que siguen el Camino del Corazón Salvaje se consideran parientes de los animales. Estos bárbaros aprenden medios mágicos para comunicarse con los animales, y su Furia agudiza su conexión con ellos mientras los llena de poder sobrenatural.",
+      "descripcion": "Camina en Comunidad con el Mundo Animal. Los bárbaros que siguen el Camino del Corazón Salvaje se consideran parientes de los animales. Estos bárbaros aprenden medios mágicos para comunicarse con los animales, y su Furia agudiza su conexión con ellos mientras los llena de poder sobrenatural.",
       "progresion": [
         {
           "nivel": 3,
           "rasgos": [
             {
-              "nombre": "Hablador con Animales",
-              "descripcion": "Puedes lanzar los hechizos Sentido Bestial y Hablar con Animales, pero solo como Rituales. Sabiduría es tu habilidad de lanzamiento de hechizos para ellos."
+              "nombre": "Furia de lo Salvaje",
+              "descripcion": "Tu Furia aprovecha el poder primigenio de los animales. Siempre que activas tu Furia, obtienes una de las siguientes opciones de tu elección:\n\n**Oso.** Mientras tu Furia está activa, tienes Resistencia a cada tipo de daño, excepto Fuerza, Necrótico, Psíquico y Radiante.\n\n**Águila.** Cuando activas tu Furia, puedes tomar las acciones Separarse y Correr como parte de esa Acción Bonificación. Mientras tu Furia está activa, puedes tomar una Acción Bonificación para tomar ambas acciones.\n\n**Lobo.** Mientras tu Furia está activa, tus aliados tienen Ventaja en las tiradas de ataque contra cualquier enemigo tuyo que esté a 5 pies de ti."
             },
             {
-              "nombre": "Furia de lo Salvaje",
-              "descripcion": "Tu Furia aprovecha el poder primigenio de los animales. Siempre que activas tu Furia, obtienes una de las siguientes opciones de tu elección:\\n\\n**Oso.** Mientras tu Furia está activa, tienes Resistencia a cada tipo de daño, excepto Fuerza, Necrótico, Psíquico y Radiante.\\n\\n**Águila.** Cuando activas tu Furia, puedes tomar las acciones Separarse y Correr como parte de esa Acción Bonificación. Mientras tu Furia está activa, puedes tomar una Acción Bonificación para tomar ambas acciones.\\n\\n**Lobo.** Mientras tu Furia está activa, tus aliados tienen Ventaja en las tiradas de ataque contra cualquier enemigo tuyo que esté a 5 pies de ti."
+              "nombre": "Hablador con Animales",
+              "descripcion": "Puedes lanzar los hechizos Sentido Bestial y Hablar con Animales, pero solo como Rituales. Sabiduría es tu habilidad de lanzamiento de hechizos para ellos."
             }
           ]
         },
@@ -97,7 +97,7 @@
           "rasgos": [
             {
               "nombre": "Aspecto de lo Salvaje",
-              "descripcion": "Ganas una de las siguientes opciones de tu elección. Siempre que termines un Descanso Largo, puedes cambiar tu elección.\\n\\n**Búho.** Tienes Visión en la Oscuridad con un rango de 60 pies. Si ya tienes Visión en la Oscuridad, su rango aumenta en 60 pies.\\n\\n**Pantera.** Tienes una Velocidad de Escalada igual a tu Velocidad.\\n\\n**Salmón.** Tienes una Velocidad de Natación igual a tu Velocidad."
+              "descripcion": "Ganas una de las siguientes opciones de tu elección. Siempre que termines un Descanso Largo, puedes cambiar tu elección.\n\n**Búho.** Tienes Visión en la Oscuridad con un rango de 60 pies. Si ya tienes Visión en la Oscuridad, su rango aumenta en 60 pies.\n\n**Pantera.** Tienes una Velocidad de Escalada igual a tu Velocidad.\n\n**Salmón.** Tienes una Velocidad de Natación igual a tu Velocidad."
             }
           ]
         },
@@ -106,7 +106,7 @@
           "rasgos": [
             {
               "nombre": "Poder de lo Salvaje",
-              "descripcion": "Siempre que activas tu Furia, obtienes una de las siguientes opciones de tu elección:\\n\\n**Halcón.** Mientras tu Furia está activa, tienes una Velocidad de Vuelo igual a tu Velocidad si no llevas ninguna armadura.\\n\\n**León.** Mientras tu Furia está activa, cualquiera de tus enemigos a 5 pies de ti tiene Desventaja en las tiradas de ataque contra objetivos que no sean tú u otro Bárbaro que tenga esta opción activa.\\n\\n**Carnero.** Mientras tu Furia está activa, puedes hacer que una criatura Grande o más pequeña obtenga la condición de Tumbado cuando la golpeas con un ataque cuerpo a cuerpo."
+              "descripcion": "Siempre que activas tu Furia, obtienes una de las siguientes opciones de tu elección:\n\n**Halcón.** Mientras tu Furia está activa, tienes una Velocidad de Vuelo igual a tu Velocidad si no llevas ninguna armadura.\n\n**León.** Mientras tu Furia está activa, cualquiera de tus enemigos a 5 pies de ti tiene Desventaja en las tiradas de ataque contra objetivos que no sean tú u otro Bárbaro que tenga esta opción activa.\n\n**Carnero.** Mientras tu Furia está activa, puedes hacer que una criatura Grande o más pequeña obtenga la condición de Tumbado cuando la golpeas con un ataque cuerpo a cuerpo."
             }
           ]
         }
@@ -115,14 +115,14 @@
     {
       "id": "worldtree",
       "nombre": "Camino del Árbol del Mundo",
-      "descripcion": "Rastrea las Raíces y Ramas del Multiverso\\n\\nLos bárbaros que siguen el Camino del Árbol del Mundo se conectan con el árbol cósmico Yggdrasil a través de su Furia. Este árbol crece entre los Planos Exteriores, conectándolos entre sí y con el Plano Material. Estos bárbaros aprovechan la magia del árbol para obtener vitalidad y como medio de viaje dimensional.",
+      "descripcion": "Rastrea las Raíces y Ramas del Multiverso. Los bárbaros que siguen el Camino del Árbol del Mundo se conectan con el árbol cósmico Yggdrasil a través de su Furia. Este árbol crece entre los Planos Exteriores, conectándolos entre sí y con el Plano Material. Estos bárbaros aprovechan la magia del árbol para obtener vitalidad y como medio de viaje dimensional.",
       "progresion": [
         {
           "nivel": 3,
           "rasgos": [
             {
               "nombre": "Vitalidad del Árbol",
-              "descripcion": "Tu Furia aprovecha la fuerza vital del Árbol del Mundo. Ganas los siguientes beneficios:\\n\\n**Impulso de Vitalidad.** Cuando activas tu Furia, ganas una cantidad de Puntos de Golpe Temporales igual a tu nivel de Bárbaro.\\n\\n**Fuerza Vital.** Al comienzo de cada uno de tus turnos mientras tu Furia está activa, puedes elegir a otra criatura a 10 pies de ti para que gane Puntos de Golpe Temporales. Para determinar el número de Puntos de Golpe Temporales, lanza un número de dados d6 igual a tu bonificador de daño por Furia y súmalos. Si quedan Puntos de Golpe Temporales cuando tu Furia termina, desaparecen."
+              "descripcion": "Tu Furia aprovecha la fuerza vital del Árbol del Mundo. Ganas los siguientes beneficios:\n\n**Impulso de Vitalidad.** Cuando activas tu Furia, ganas una cantidad de Puntos de Golpe Temporales igual a tu nivel de Bárbaro.\n\n**Fuerza Vital.** Al comienzo de cada uno de tus turnos mientras tu Furia está activa, puedes elegir a otra criatura a 10 pies de ti para que gane Puntos de Golpe Temporales. Para determinar el número de Puntos de Golpe Temporales, lanza un número de dados d6 igual a tu bonificador de daño por Furia y súmalos. Si quedan Puntos de Golpe Temporales cuando tu Furia termina, desaparecen."
             }
           ]
         },
@@ -140,7 +140,7 @@
           "rasgos": [
             {
               "nombre": "Viaje por el Árbol",
-              "descripcion": "Cuando activas tu Furia y como una Acción Bonificación mientras tu Furia está activa, puedes teletransportarte hasta 60 pies a un espacio desocupado que puedas ver.\\n\\nAdemás, una vez por Furia, puedes aumentar el rango de esa teletransportación a 150 pies. Cuando lo haces, también puedes traer hasta seis criaturas voluntarias que estén a 10 pies de ti. Cada criatura se teletransporta a un espacio desocupado de tu elección a 10 pies de tu espacio de destino."
+              "descripcion": "Cuando activas tu Furia y como una Acción Bonificación mientras tu Furia está activa, puedes teletransportarte hasta 60 pies a un espacio desocupado que puedas ver.\n\nAdemás, una vez por Furia, puedes aumentar el rango de esa teletransportación a 150 pies. Cuando lo haces, también puedes traer hasta seis criaturas voluntarias que estén a 10 pies de ti. Cada criatura se teletransporta a un espacio desocupado de tu elección a 10 pies de tu espacio de destino."
             }
           ]
         }
@@ -149,7 +149,7 @@
     {
       "id": "zealot",
       "nombre": "Camino del Fanático",
-      "descripcion": "Furia en Éxtasis con un Dios\\n\\nLos bárbaros que siguen el Camino del Fanático reciben dones de un dios o un panteón. Estos bárbaros experimentan su Furia como un episodio extático de unión divina que los infunde de poder. A menudo son aliados de los sacerdotes y otros seguidores de su dios o panteón.",
+      "descripcion": "Furia en Éxtasis con un Dios. Los bárbaros que siguen el Camino del Fanático reciben dones de un dios o un panteón. Estos bárbaros experimentan su Furia como un episodio extático de unión divina que los infunde de poder. A menudo son aliados de los sacerdotes y otros seguidores de su dios o panteón.",
       "progresion": [
         {
           "nivel": 3,
@@ -160,7 +160,7 @@
             },
             {
               "nombre": "Guerrero de los Dioses",
-              "descripcion": "Una entidad divina te ayuda a asegurar que puedas continuar la lucha. Tienes una reserva de cuatro dados d12 que puedes gastar para curarte. Como una Acción Bonificación, puedes gastar dados de la reserva, lanzarlos y recuperar una cantidad de Puntos de Golpe igual al total de la tirada.\\n\\nTu reserva recupera todos los dados gastados cuando terminas un Descanso Largo.\\n\\nEl número máximo de dados de la reserva aumenta en uno cuando alcanzas los niveles de Bárbaro 6 (5 dados), 12 (6 dados) y 17 (7 dados)."
+              "descripcion": "Una entidad divina te ayuda a asegurar que puedas continuar la lucha. Tienes una reserva de cuatro dados d12 que puedes gastar para curarte. Como una Acción Bonificación, puedes gastar dados de la reserva, lanzarlos y recuperar una cantidad de Puntos de Golpe igual al total de la tirada.\n\nTu reserva recupera todos los dados gastados cuando terminas un Descanso Largo.\n\nEl número máximo de dados de la reserva aumenta en uno cuando alcanzas los niveles de Bárbaro 6 (5 dados), 12 (6 dados) y 17 (7 dados)."
             }
           ]
         },
@@ -178,7 +178,7 @@
           "rasgos": [
             {
               "nombre": "Furia de los Dioses",
-              "descripcion": "Cuando activas tu Furia, puedes asumir la forma de un guerrero divino. Esta forma dura 1 minuto o hasta que caigas a 0 Puntos de Golpe. Una vez que usas esta característica, no puedes volver a hacerlo hasta que termines un Descanso Largo.\\n\\nMientras estás en esta forma, obtienes los siguientes beneficios:\\n\\n**Vuelo.** Tienes una Velocidad de Vuelo igual a tu Velocidad y puedes flotar.\\n\\n**Resistencia.** Tienes Resistencia al daño Necrótico, Psíquico y Radiante.\\n\\n**Revivificación.** Cuando una criatura a 30 pies de ti fuera a reducirse a 0 Puntos de Golpe, puedes tomar una Reacción para gastar un uso de tu Furia y cambiar en su lugar los Puntos de Golpe del objetivo a un número igual a tu nivel de Bárbaro."
+              "descripcion": "Cuando activas tu Furia, puedes asumir la forma de un guerrero divino. Esta forma dura 1 minuto o hasta que caigas a 0 Puntos de Golpe. Una vez que usas esta característica, no puedes volver a hacerlo hasta que termines un Descanso Largo.\n\nMientras estás en esta forma, obtienes los siguientes beneficios:\n\n**Vuelo.** Tienes una Velocidad de Vuelo igual a tu Velocidad y puedes flotar.\n\n**Resistencia.** Tienes Resistencia al daño Necrótico, Psíquico y Radiante.\n\n**Revivificación.** Cuando una criatura a 30 pies de ti fuera a reducirse a 0 Puntos de Golpe, puedes tomar una Reacción para gastar un uso de tu Furia y cambiar en su lugar los Puntos de Golpe del objetivo a un número igual a tu nivel de Bárbaro."
             }
           ]
         }
@@ -198,7 +198,7 @@
       "rasgos": [
         {
           "nombre": "Furia",
-          "descripcion": "Puedes entrar en tu Furia el número de veces indicado para tu nivel de Bárbaro en la tabla de características.\\n\\nRecuperas un uso gastado al terminar un Descanso Corto, y todos los usos al terminar un Descanso Largo.\\n\\nMientras está activa, tu Furia sigue las siguientes reglas:\\n\\nResistencia al Daño: Tienes resistencia al daño contundente, perforante y cortante.\\n\\nDaño por Furia: Cuando haces un ataque usando Fuerza (con un arma o un ataque desarmado) e infliges daño a un objetivo, ganas una bonificación al daño que aumenta con tu nivel.\\n\\nVentaja en Fuerza: Tienes ventaja en las comprobaciones de Fuerza y tiradas de salvación de Fuerza.\\n\\nSin Concentración ni Hechizos: No puedes mantener concentración ni lanzar hechizos.\\n\\nDuración: La Furia dura hasta el final de tu siguiente turno, y termina antes si te pones armadura pesada o tienes la condición Incapacitado.\\n\\nSi tu Furia sigue activa en tu siguiente turno, puedes extenderla otra ronda haciendo una de las siguientes acciones: hacer una tirada de ataque contra un enemigo, forzar a un enemigo a hacer una tirada de salvación, o tomar una Acción Bonificación para extender tu Furia.\\n\\nPuedes mantener una Furia hasta 10 minutos."
+          "descripcion": "Puedes entrar en tu Furia el número de veces indicado para tu nivel de Bárbaro en la tabla de características.\n\n**Recuperación:**\n- Recuperas un uso gastado al terminar un Descanso Corto\n- Recuperas todos los usos al terminar un Descanso Largo\n\n**Reglas de Furia:**\n- **Resistencia al Daño:** Tienes resistencia al daño contundente, perforante y cortante\n- **Daño por Furia:** Cuando haces un ataque usando Fuerza (con un arma o un ataque desarmado) e infliges daño a un objetivo, ganas una bonificación al daño que aumenta con tu nivel\n- **Ventaja en Fuerza:** Tienes ventaja en las comprobaciones de Fuerza y tiradas de salvación de Fuerza\n- **Sin Concentración ni Hechizos:** No puedes mantener concentración ni lanzar hechizos\n\n**Duración:**\n- La Furia dura hasta el final de tu siguiente turno\n- Termina antes si te pones armadura pesada o tienes la condición Incapacitado\n- Si tu Furia sigue activa en tu siguiente turno, puedes extenderla otra ronda haciendo una de las siguientes acciones: hacer una tirada de ataque contra un enemigo, forzar a un enemigo a hacer una tirada de salvación, o tomar una Acción Bonificación para extender tu Furia\n- Puedes mantener una Furia hasta 10 minutos"
         },
         {
           "nombre": "Defensa sin Armadura",
@@ -354,7 +354,7 @@
       "rasgos": [
         {
           "nombre": "Golpe Brutal",
-          "descripcion": "Si usas Ataque Temerario, puedes renunciar a cualquier ventaja en una tirada de ataque basada en Fuerza de tu elección en tu turno.\\n\\nLa tirada de ataque elegida no debe tener Desventaja.\\n\\nSi la tirada de ataque elegida impacta, el objetivo sufre 1d10 de daño extra del mismo tipo infligido por el arma o el ataque desarmado, y puedes causar un efecto de Golpe Brutal de tu elección.\\n\\nOpciones de efecto:\\n\\nGolpe Fuente: El objetivo es empujado 4.5 metros (15 pies) recto lejos de ti. Luego puedes moverte hasta la mitad de tu velocidad recto hacia el objetivo sin provocar Ataques de Oportunidad.\\n\\nGolpe a los Tendones: La velocidad del objetivo se reduce en 4.5 metros (15 pies) hasta el inicio de tu siguiente turno."
+          "descripcion": "Si usas Ataque Temerario, puedes renunciar a cualquier ventaja en una tirada de ataque basada en Fuerza de tu elección en tu turno.\n\nLa tirada de ataque elegida no debe tener Desventaja.\n\nSi la tirada de ataque elegida impacta, el objetivo sufre 1d10 de daño extra del mismo tipo infligido por el arma o el ataque desarmado, y puedes causar un efecto de Golpe Brutal de tu elección.\n\n**Opciones de efecto:**\n- **Golpe Fuente:** El objetivo es empujado 4.5 metros (15 pies) recto lejos de ti. Luego puedes moverte hasta la mitad de tu velocidad recto hacia el objetivo sin provocar Ataques de Oportunidad.\n- **Golpe a los Tendones:** La velocidad del objetivo se reduce en 4.5 metros (15 pies) hasta el inicio de tu siguiente turno."
         }
       ]
     },
@@ -420,7 +420,7 @@
       "rasgos": [
         {
           "nombre": "Golpe Brutal Mejorado",
-          "descripcion": "Has perfeccionado nuevas formas de atacar furiosamente.\\n\\nLos siguientes efectos ahora están entre tus opciones de Golpe Brutal:\\n\\nGolpe Aturdidor: El objetivo tiene Desventaja en la siguiente tirada de salvación que haga y no puede hacer Ataques de Oportunidad hasta el inicio de tu siguiente turno.\\n\\nGolpe Devastador: Antes del inicio de tu siguiente turno, la siguiente tirada de ataque hecha por otra criatura contra el objetivo gana un bono de +5 a la tirada."
+          "descripcion": "Has perfeccionado nuevas formas de atacar furiosamente.\n\n**Efectos adicionales de Golpe Brutal:**\n- **Golpe Aturdidor:** El objetivo tiene Desventaja en la siguiente tirada de salvación que haga y no puede hacer Ataques de Oportunidad hasta el inicio de tu siguiente turno.\n- **Golpe Devastador:** Antes del inicio de tu siguiente turno, la siguiente tirada de ataque hecha por otra criatura contra el objetivo gana un bono de +5 a la tirada."
         }
       ]
     },

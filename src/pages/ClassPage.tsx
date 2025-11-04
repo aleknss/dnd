@@ -11,6 +11,7 @@ import barbarianData from "../configs/barbarian.json";
 import barbarianIndex from "../assets/classes/barbarian/barbarian-index.jpg";
 import { Subclass } from "../components/svgs/Subclass";
 import { PiPlusCircleBold } from "react-icons/pi";
+import ReactMarkdown from "react-markdown";
 
 export default function ClassPage() {
   const { id } = useParams<{ id: string }>();
@@ -146,12 +147,14 @@ export default function ClassPage() {
                               key={`trait-${nivel.nivel}-${index}`}
                               className="md:w-full"
                             >
-                              <h3 className=" text-blue-primary font-inknut">
+                              <h4 className=" text-blue-primary font-inknut">
                                 {rasgo.nombre}
-                              </h3>
-                              <p className=" text-blue-primary whitespace-pre-line text-justify">
-                                {rasgo.descripcion}
-                              </p>
+                              </h4>
+                              <div className="text-blue-primary text-justify">
+                                <ReactMarkdown>
+                                  {rasgo.descripcion}
+                                </ReactMarkdown>
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -220,45 +223,47 @@ export default function ClassPage() {
                       {}
                       {rasgo.nombre}
                     </h3>
-                    <p className="text-blue-primary whitespace-pre-line">
-                      {rasgo.descripcion}
-                    </p>
+                    <div className="text-blue-primary">
+                      <ReactMarkdown>{rasgo.descripcion}</ReactMarkdown>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           ))}
-        <div>
+        <div className="flex flex-col gap-16 my-16">
           {subclases.map((subclase, index) => {
             const imagePath = new URL(
-              `../assets/classes/barbarian/${subclase.id}.jpg`,
+              `../assets/classes/${id}/${subclase.id}.jpg`,
               import.meta.url
             ).href;
 
             return (
-              <div id={`subclase-${index}`} key={`subclase-${index}`}>
+              <div
+                className="flex flex-col gap-4"
+                id={`subclase-${index}`}
+                key={`subclase-${index}`}
+              >
                 <h2 className="text-2xl font-inknut text-blue-dark">
                   {subclase.nombre}
                 </h2>
-                <div className="flex flex-col gap-4">
-                  <div>
-                    <img
-                      src={imagePath}
-                      className="w-full max-w-[300px] h-auto rounded-sm my-4"
-                      alt={subclase.nombre}
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = "none";
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <p className="font-ptsans text-blue-primary whitespace-pre-line">
-                      {subclase.descripcion}
-                    </p>
+                <div className=" text-blue-primary">
+                  <ReactMarkdown>{subclase.descripcion}</ReactMarkdown>
+                </div>
+                <div className="flex flex-col lg:flex-row gap-4 float-left">
+                  <img
+                    src={imagePath}
+                    className="w-full h-[400px] object-top lg:h-auto lg:w-[300px] object-cover rounded-sm"
+                    alt={subclase.nombre}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                  <div className="flex flex-col gap-8">
                     {subclase.progresion.map((progresion) => (
                       <div
                         key={`progression-${progresion.nivel}`}
-                        className="w-full flex flex-col gap-5"
+                        className="w-full flex flex-col gap-2"
                       >
                         <h2 className="text-xl font-inknut text-red-secondary">
                           Nivel {progresion.nivel}
@@ -267,18 +272,20 @@ export default function ClassPage() {
                           {progresion.rasgos.map((rasgo, idx) => (
                             <div
                               key={`trait-${progresion.nivel}-${idx}`}
-                              className={`flex flex-col gap-1 ${
+                              className={`flex flex-col w-full  ${
                                 progresion.rasgos.length === 1
-                                  ? "md:w-full"
-                                  : "md:w-[calc(50%-1rem)]"
+                                  ? "xl:w-full"
+                                  : "xl:w-[calc(50%-1rem)]"
                               }`}
                             >
                               <h3 className="text-blue-primary font-inknut flex gap-1 items-center">
                                 {rasgo.nombre}
                               </h3>
-                              <p className="text-blue-primary whitespace-pre-line">
-                                {rasgo.descripcion}
-                              </p>
+                              <div className="text-blue-primary ">
+                                <ReactMarkdown>
+                                  {rasgo.descripcion}
+                                </ReactMarkdown>
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -316,7 +323,6 @@ export default function ClassPage() {
             </a>
           ))}
         </div>
-        <img src={barbarianIndex} className="rounded-sm" alt="index" />
       </div>
     </div>
   );
