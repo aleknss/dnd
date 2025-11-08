@@ -4,6 +4,8 @@ Proyecto personal para refinar las bases de React, conocer y explorar límites. 
 
 🚧 En construcción.
 
+**Actualmente trabajando en:** Clases.
+
 ## 📝 Progreso del proyecto
 
 ### ✔️ Aprendizajes
@@ -16,3 +18,4 @@ Proyecto personal para refinar las bases de React, conocer y explorar límites. 
 
 - Información de las reglas restantes.
 - Tanteo la posibilidad de creación de cuentas con interacción personalizada con la página (favoritos, seguimiento, marcas, comentarios...) con un backend y base de datos sencillo. Posible integrar en este guardado en el servidor alguna información de mecánicas en vez de JSON.
+  - Posiblemente implemente Node.js con MariaDB (??).

@@ -1,0 +1,478 @@
+{
+  "clase": "Bardo",
+  "descripcion": "Puedes inspirar a otros de forma sobrenatural a través de palabras, música o danza. Esta inspiración, representada por tu dado de Inspiración Bárdica, puede convertir el fracaso en éxito.",
+  "info_table": [
+    {
+      "label": "Característica principal",
+      "value": "Carisma",
+      "type": "text"
+    },
+    {
+      "label": "Dado de puntos de golpe",
+      "value": "1d8 de nivel de Bardo",
+      "type": "dice",
+      "dice_type": "D8"
+    },
+    {
+      "label": "Competencias en tiradas de salvación",
+      "value": "Destreza y Carisma",
+      "type": "text"
+    },
+    {
+      "label": "Competencias en habilidades",
+      "value": "Elige 3 habilidades cualesquiera",
+      "type": "text"
+    },
+    {
+      "label": "Competencias con armas",
+      "value": "Armas sencillas",
+      "type": "text"
+    },
+    {
+      "label": "Competencias con herramientas",
+      "value": "Elige tres instrumentos musicales",
+      "type": "text"
+    },
+    {
+      "label": "Entrenamiento con armaduras",
+      "value": "Armaduras ligeras",
+      "type": "text"
+    },
+    {
+      "label": "Equipo inicial",
+      "value": "Elige A o B: (A) Armadura de cuero, 2 Dagas, Instrumento Musical de tu elección, Paquete de Artista, 19 po; o (B) 90 po",
+      "type": "text"
+    }
+  ],
+  "subclases": [
+    {
+      "id": "dance",
+      "nombre": "Colegio de la Danza",
+      "descripcion": "Muévete en Armonía con el Cosmos. Los bardos del Colegio de la Danza saben que las Palabras de la Creación no pueden contenerse en el habla o el canto; las palabras son pronunciadas por los movimientos de los cuerpos celestiales y fluyen a través de los movimientos de las criaturas más pequeñas. Estos bardos practican una forma de estar en armonía con el cosmos giratorio que enfatiza la agilidad, la velocidad y la gracia.",
+      "progresion": [
+        {
+          "nivel": 3,
+          "rasgos": [
+            {
+              "nombre": "Juego de Piernas Deslumbrante",
+              "descripcion": "Mientras no lleves armadura ni empuñes un Escudo, obtienes los siguientes beneficios:\n\n**Virtuoso de la Danza.** Tienes Ventaja en cualquier prueba de Carisma (Interpretación) que hagas que implique que bailes.\n\n**Defensa sin Armadura.** Tu Clase de Armadura base es igual a 10 más tus modificadores de Destreza y Carisma.\n\n**Golpes Ágiles.** Cuando gastas un uso de tu Inspiración Bárdica como parte de una acción, acción bonificada o reacción, puedes hacer un Golpe sin Arma como parte de esa acción, acción bonificada o reacción.\n\n**Daño Bárdico.** Puedes usar Destreza en lugar de Fuerza para las tiradas de ataque de tus Golpes sin Arma. Cuando infliges daño con un Golpe sin Arma, puedes infligir daño Contundente igual a una tirada de tu dado de Inspiración Bárdica más tu modificador de Destreza, en lugar del daño normal del golpe. Esta tirada no gasta el dado."
+            }
+          ]
+        },
+        {
+          "nivel": 6,
+          "rasgos": [
+            {
+              "nombre": "Movimiento Inspirador",
+              "descripcion": "Cuando un enemigo que puedes ver termina su turno a 5 pies de ti, puedes usar tu Reacción y gastar un uso de tu Inspiración Bárdica para moverte hasta la mitad de tu Velocidad. Luego, un aliado de tu elección a 30 pies de ti también puede moverse hasta la mitad de su Velocidad usando su Reacción.\n\nNinguno de los movimientos de esta característica provoca Ataques de Oportunidad."
+            },
+            {
+              "nombre": "Juego de Piernas en Tándem",
+              "descripcion": "Cuando tiras Iniciativa, puedes gastar un uso de tu Inspiración Bárdica si no tienes la condición Incapacitado. Cuando lo haces, tira tu dado de Inspiración Bárdica; tú y cada aliado a 30 pies de ti que pueda verte u oírte gana un bonificador a la Iniciativa igual al número obtenido."
+            }
+          ]
+        },
+        {
+          "nivel": 14,
+          "rasgos": [
+            {
+              "nombre": "Evasión Conductora",
+              "descripcion": "Cuando eres sometido a un efecto que te permite hacer una tirada de salvación de Destreza para recibir solo la mitad del daño, en su lugar no recibes daño si tienes éxito en la tirada de salvación y solo la mitad del daño si fallas. Si alguna criatura a 5 pies de ti está haciendo la misma tirada de salvación de Destreza, puedes compartir este beneficio con ella para esa salvación.\n\nNo puedes usar esta característica si tienes la condición Incapacitado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glamour",
+      "nombre": "Colegio del Glamour",
+      "descripcion": "Teje Seductora Magia Feérica. El Colegio del Glamour tiene sus orígenes en la magia seductora del Feywild. Los bardos que estudian esta magia tejen hilos de belleza y terror en sus canciones e historias, y los más poderosos entre ellos pueden envolverse en una majestuosidad de otro mundo. Sus actuaciones despiertan un anhelo nostálgico por la inocencia olvidada, evocan recuerdos inconscientes de miedos arraigados y tocan las emociones incluso de los oyentes más duros de corazón.",
+      "progresion": [
+        {
+          "nivel": 3,
+          "rasgos": [
+            {
+              "nombre": "Magia Seductora",
+              "descripcion": "Siempre tienes preparados los hechizos 'Hechizar Persona' e 'Imagen Múltiple'.\n\nAdemás, inmediatamente después de lanzar un hechizo de Encantamiento o Ilusión usando un espacio de conjuro, puedes hacer que una criatura que puedas ver a 60 pies de ti haga una tirada de salvación de Sabiduría contra la CD de tus hechizos. Si falla la salvación, el objetivo tiene la condición de Hechizado o Asustado (a tu elección) durante 1 minuto. El objetivo repite la salvación al final de cada uno de sus turnos, terminando el efecto sobre sí mismo si tiene éxito.\n\nUna vez que usas este beneficio, no puedes volver a usarlo hasta que termines un Descanso Largo. También puedes restaurar su uso gastando un uso de tu Inspiración Bárdica (no se requiere acción)."
+            },
+            {
+              "nombre": "Manto de Inspiración",
+              "descripcion": "Puedes tejer magia feérica en una canción o danza para llenar a otros de vigor. Como Acción Bonificada, puedes gastar un uso de Inspiración Bárdica, tirando un dado de Inspiración Bárdica. Al hacerlo, elige un número de otras criaturas a 60 pies de ti, hasta un número igual a tu modificador de Carisma (mínimo de una criatura). Cada una de esas criaturas gana un número de Puntos de Golpe Temporales igual a dos veces el número obtenido en el dado de Inspiración Bárdica, y luego cada una puede usar su Reacción para moverse hasta su Velocidad sin provocar Ataques de Oportunidad."
+            }
+          ]
+        },
+        {
+          "nivel": 6,
+          "rasgos": [
+            {
+              "nombre": "Manto de Majestad",
+              "descripcion": "Siempre tienes preparado el hechizo 'Comando'.\n\nComo Acción Bonificada, lanzas 'Comando' sin gastar un espacio de conjuro, y adoptas una apariencia sobrenatural durante 1 minuto o hasta que tu Concentración termine. Durante este tiempo, puedes lanzar 'Comando' como Acción Bonificada sin gastar un espacio de conjuro.\n\nCualquier criatura Hechizada por ti falla automáticamente su tirada de salvación contra el 'Comando' que lances con esta característica.\n\nUna vez que usas esta característica, no puedes volver a usarla hasta que termines un Descanso Largo. También puedes restaurar su uso gastando un espacio de conjuro de nivel 3 o superior (no se requiere acción)."
+            }
+          ]
+        },
+        {
+          "nivel": 14,
+          "rasgos": [
+            {
+              "nombre": "Majestad Inquebrantable",
+              "descripcion": "Como Acción Bonificada, puedes asumir una presencia mágicamente majestuosa durante 1 minuto o hasta que tengas la condición Incapacitado. Durante la duración, cada vez que una criatura te golpea con una tirada de ataque por primera vez en un turno, el atacante debe tener éxito en una tirada de salvación de Carisma contra la CD de tus hechizos, o el ataque falla en su lugar, ya que la criatura retrocede ante tu majestuosidad.\n\nUna vez que asumes esta presencia majestuosa, no puedes volver a hacerlo hasta que termines un Descanso Corto o Largo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lore",
+      "nombre": "Colegio del Saber",
+      "descripcion": "Sondea las Profundidades del Conocimiento Mágico. Los bardos del Colegio del Saber recopilan hechizos y secretos de diversas fuentes, como tomos eruditos, ritos místicos y cuentos campesinos. Los miembros del colegio se reúnen en bibliotecas y universidades para compartir su saber entre ellos. También se encuentran en festivales o asuntos de estado, donde pueden exponer la corrupción, desentrañar mentiras y burlarse de figuras de autoridad engreídas.",
+      "progresion": [
+        {
+          "nivel": 3,
+          "rasgos": [
+            {
+              "nombre": "Competencias Adicionales",
+              "descripcion": "Ganas competencia en tres habilidades de tu elección."
+            },
+            {
+              "nombre": "Palabras Hirientes",
+              "descripcion": "Aprendes a usar tu ingenio para distraer, confundir y minar sobrenaturalmente la confianza y competencia de otros. Cuando una criatura que puedes ver a 60 pies de ti hace una tirada de daño o tiene éxito en una prueba de característica o tirada de ataque, puedes usar tu Reacción para gastar un uso de tu Inspiración Bárdica; tira tu dado de Inspiración Bárdica y resta el número obtenido de la tirada de la criatura, reduciendo el daño o convirtiendo potencialmente el éxito en un fracaso."
+            }
+          ]
+        },
+        {
+          "nivel": 6,
+          "rasgos": [
+            {
+              "nombre": "Descubrimientos Mágicos",
+              "descripcion": "Aprendes dos hechizos de tu elección. Estos hechizos pueden provenir de la lista de hechizos de Clérigo, Druida o Mago o cualquier combinación de ellas. Un hechizo que elijas debe ser un cantrip o un hechizo para el cual tengas espacios de conjuro, como se muestra en la tabla de Características del Bardo.\n\nSiempre tienes los hechizos elegidos preparados, y cada vez que ganas un nivel de Bardo, puedes reemplazar uno de los hechizos por otro que cumpla estos requisitos."
+            }
+          ]
+        },
+        {
+          "nivel": 14,
+          "rasgos": [
+            {
+              "nombre": "Habilidad sin Par",
+              "descripcion": "Cuando haces una prueba de característica o tirada de ataque y fallas, puedes gastar un uso de Inspiración Bárdica; tira el dado de Inspiración Bárdica y suma el número obtenido al d20, convirtiendo potencialmente un fracaso en un éxito. Si sigue siendo un fracaso, la Inspiración Bárdica no se gasta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "valor",
+      "nombre": "Colegio del Valor",
+      "descripcion": "Canta las Hazañas de los Héroes Antiguos. Los bardos del Colegio del Valor son narradores audaces cuyas historias preservan la memoria de los grandes héroes del pasado. Estos bardos cantan las hazañas de los poderosos en salones abovedados o ante multitudes reunidas alrededor de grandes hogueras. Viajan para presenciar grandes eventos de primera mano y para asegurarse de que el recuerdo de estos eventos no se desvanezca. Con sus canciones, inspiran a nuevas generaciones a alcanzar las mismas cotas de logro que los héroes de antaño.",
+      "progresion": [
+        {
+          "nivel": 3,
+          "rasgos": [
+            {
+              "nombre": "Inspiración de Combate",
+              "descripcion": "Puedes usar tu ingenio para cambiar el curso de la batalla. Una criatura que tenga un dado de Inspiración Bárdica de ti puede usarlo para uno de los siguientes efectos:\n\n**Defensa.** Cuando la criatura es golpeada por una tirada de ataque, puede usar su Reacción para tirar el dado de Inspiración Bárdica y sumar el número obtenido a su CA contra ese ataque, causando potencialmente que el ataque falle.\n\n**Ofensa.** Inmediatamente después de que la criatura golpee a un objetivo con una tirada de ataque, puede tirar el dado de Inspiración Bárdica y sumar el número obtenido al daño del ataque contra el objetivo."
+            },
+            {
+              "nombre": "Entrenamiento Marcial",
+              "descripcion": "Ganas competencia con armas Marciales y entrenamiento con armaduras Medias y Escudos.\n\nAdemás, puedes usar un arma Sencilla o Marcial como Foco de Lanzamiento de Hechizos para lanzar hechizos de tu lista de hechizos de Bardo."
+            }
+          ]
+        },
+        {
+          "nivel": 6,
+          "rasgos": [
+            {
+              "nombre": "Ataque Adicional",
+              "descripcion": "Puedes atacar dos veces en lugar de una cuando tomas la acción Atacar en tu turno.\n\nAdemás, puedes lanzar uno de tus cantrips que tenga un tiempo de lanzamiento de una acción en lugar de uno de esos ataques."
+            }
+          ]
+        },
+        {
+          "nivel": 14,
+          "rasgos": [
+            {
+              "nombre": "Magia de Batalla",
+              "descripcion": "Después de lanzar un hechizo que tiene un tiempo de lanzamiento de una acción, puedes hacer un ataque con un arma como Acción Bonificada."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "progresion_por_nivel": [
+    {
+      "nivel": 1,
+      "bonificador_por_competencia": "+2",
+      "dados_de_golpe": "1d8",
+      "dado_inspiracion": "d6",
+      "cantrips_conocidos": 2,
+      "rasgos": [
+        {
+          "nombre": "Inspiración Bárdica",
+          "descripcion": "Puedes inspirar a otros sobrenaturalmente. Tu dado de Inspiración Bárdica es un d6.\n\n**Uso:** Como Acción Bonificada, inspiras a otra criatura a 60 pies que pueda verte u oírte. La criatura gana un dado de Inspiración Bárdica. Solo puede tener uno a la vez.\n\n**Efecto:** Una vez en la siguiente hora, cuando la criatura falla una Prueba de d20, puede tirar el dado y sumar el resultado, potencialmente convirtiendo el fallo en éxito. El dado se gasta al tirarlo.\n\n**Usos:** Puedes usarlo un número de veces igual a tu modificador de Carisma (mínimo 1). Recuperas todos los usos con un Descanso Largo."
+        },
+        {
+          "nombre": "Lanzamiento de Hechizos",
+          "descripcion": "Has aprendido a lanzar hechizos a través de tus artes bárdicas.\n\n**Cantrips:** Conoces dos cantrips de tu elección de la lista de Bardo.\n\n**Espacios de conjuro:** La tabla de Características del Bardo muestra cuántos espacios de conjuro tienes. Recuperas todos los espacios gastados con un Descanso Largo.\n\n**Hechizos preparados:** Preparas una lista de hechizos de nivel 1 o superior. Comienzas con cuatro hechizos de nivel 1 de la lista de Bardo. El número de hechizos preparados aumenta con tu nivel, como se muestra en la tabla de Características del Bardo.\n\n**Habilidad de lanzamiento:** Tu habilidad para lanzar hechizos es Carisma.\n\n**Foco de lanzamiento:** Puedes usar un Instrumento Musical como Foco de Lanzamiento de Hechizos."
+        }
+      ]
+    },
+    {
+      "nivel": 2,
+      "bonificador_por_competencia": "+2",
+      "dados_de_golpe": "2d8",
+      "dado_inspiracion": "d6",
+      "cantrips_conocidos": 2,
+      "rasgos": [
+        {
+          "nombre": "Pericia",
+          "descripcion": "Ganas Pericia en dos de tus competencias de habilidad a tu elección. A nivel 9, ganas Pericia en dos competencias de habilidad más."
+        },
+        {
+          "nombre": "Polifacético",
+          "descripcion": "Puedes añadir la mitad de tu Bonificador de Competencia (redondeando hacia abajo) a cualquier prueba de característica que hagas que use una competencia de habilidad que no tengas y que no use de otro modo tu Bonificador de Competencia."
+        }
+      ]
+    },
+    {
+      "nivel": 3,
+      "bonificador_por_competencia": "+2",
+      "dados_de_golpe": "3d8",
+      "dado_inspiracion": "d6",
+      "cantrips_conocidos": 2,
+      "rasgos": [
+        {
+          "nombre": "Subclase de Bardo",
+          "descripcion": "Ganas una subclase de Bardo de tu elección. Una subclase es una especialización que te otorga rasgos en ciertos niveles.",
+          "type": "Subclass"
+        }
+      ]
+    },
+    {
+      "nivel": 4,
+      "bonificador_por_competencia": "+2",
+      "dados_de_golpe": "4d8",
+      "dado_inspiracion": "d6",
+      "cantrips_conocidos": 3,
+      "rasgos": [
+        {
+          "nombre": "Mejora de Puntuación de Característica",
+          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques. Ganas este rasgo de nuevo en los niveles 8, 12 y 16.",
+          "type": "ASI"
+        }
+      ]
+    },
+    {
+      "nivel": 5,
+      "bonificador_por_competencia": "+3",
+      "dados_de_golpe": "5d8",
+      "dado_inspiracion": "d8",
+      "cantrips_conocidos": 3,
+      "rasgos": [
+        {
+          "nombre": "Fuente de Inspiración",
+          "descripcion": "Ahora recuperas todos tus usos gastados de Inspiración Bárdica cuando terminas un Descanso Corto o Largo.\n\nAdemás, puedes gastar un espacio de conjuro (no se requiere acción) para recuperar un uso gastado de Inspiración Bárdica."
+        }
+      ]
+    },
+    {
+      "nivel": 6,
+      "bonificador_por_competencia": "+3",
+      "dados_de_golpe": "6d8",
+      "dado_inspiracion": "d8",
+      "cantrips_conocidos": 3,
+      "rasgos": [
+        {
+          "nombre": "Rasgo de Subclase",
+          "descripcion": "Ganas un rasgo de tu subclase de Bardo.",
+          "type": "Subclass"
+        }
+      ]
+    },
+    {
+      "nivel": 7,
+      "bonificador_por_competencia": "+3",
+      "dados_de_golpe": "7d8",
+      "dado_inspiracion": "d8",
+      "cantrips_conocidos": 3,
+      "rasgos": [
+        {
+          "nombre": "Contraencantamiento",
+          "descripcion": "Puedes usar notas musicales o palabras de poder para interrumpir efectos que influyen en la mente. Si tú o una criatura a 30 pies de ti falla una tirada de salvación contra un efecto que aplica la condición de Hechizado o Asustado, puedes usar tu Reacción para hacer que la salvación se vuelva a tirar, y la nueva tirada tiene Ventaja."
+        }
+      ]
+    },
+    {
+      "nivel": 8,
+      "bonificador_por_competencia": "+3",
+      "dados_de_golpe": "8d8",
+      "dado_inspiracion": "d8",
+      "cantrips_conocidos": 3,
+      "rasgos": [
+        {
+          "nombre": "Mejora de Puntuación de Característica",
+          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques.",
+          "type": "ASI"
+        }
+      ]
+    },
+    {
+      "nivel": 9,
+      "bonificador_por_competencia": "+4",
+      "dados_de_golpe": "9d8",
+      "dado_inspiracion": "d8",
+      "cantrips_conocidos": 3,
+      "rasgos": [
+        {
+          "nombre": "Pericia",
+          "descripcion": "Ganas Pericia en dos de tus competencias de habilidad adicionales a tu elección."
+        }
+      ]
+    },
+    {
+      "nivel": 10,
+      "bonificador_por_competencia": "+4",
+      "dados_de_golpe": "10d8",
+      "dado_inspiracion": "d10",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Secretos Mágicos",
+          "descripcion": "Has aprendido secretos de varias tradiciones mágicas. Cada vez que alcanzas un nivel de Bardo (incluido este) y el número de Hechizos Preparados en la tabla de Características del Bardo aumenta, puedes elegir cualquiera de tus nuevos hechizos preparados de las listas de hechizos de Bardo, Clérigo, Druida y Mago, y los hechizos elegidos cuentan como hechizos de Bardo para ti. Además, cada vez que reemplazas un hechizo preparado para esta clase, puedes reemplazarlo con un hechizo de esas listas."
+        }
+      ]
+    },
+    {
+      "nivel": 11,
+      "bonificador_por_competencia": "+4",
+      "dados_de_golpe": "11d8",
+      "dado_inspiracion": "d10",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Mejora de Lanzamiento de Hechizos",
+          "descripcion": "Tu poder mágico aumenta. Ganas acceso a espacios de conjuro de nivel 6."
+        }
+      ]
+    },
+    {
+      "nivel": 12,
+      "bonificador_por_competencia": "+4",
+      "dados_de_golpe": "12d8",
+      "dado_inspiracion": "d10",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Mejora de Puntuación de Característica",
+          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques.",
+          "type": "ASI"
+        }
+      ]
+    },
+    {
+      "nivel": 13,
+      "bonificador_por_competencia": "+5",
+      "dados_de_golpe": "13d8",
+      "dado_inspiracion": "d10",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Mejora de Lanzamiento de Hechizos",
+          "descripcion": "Tu poder mágico aumenta. Ganas acceso a espacios de conjuro de nivel 7."
+        }
+      ]
+    },
+    {
+      "nivel": 14,
+      "bonificador_por_competencia": "+5",
+      "dados_de_golpe": "14d8",
+      "dado_inspiracion": "d10",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Rasgo de Subclase",
+          "descripcion": "Ganas un rasgo de tu subclase de Bardo.",
+          "type": "Subclass"
+        }
+      ]
+    },
+    {
+      "nivel": 15,
+      "bonificador_por_competencia": "+5",
+      "dados_de_golpe": "15d8",
+      "dado_inspiracion": "d12",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Mejora de Lanzamiento de Hechizos",
+          "descripcion": "Tu poder mágico aumenta. Ganas acceso a espacios de conjuro de nivel 8."
+        }
+      ]
+    },
+    {
+      "nivel": 16,
+      "bonificador_por_competencia": "+5",
+      "dados_de_golpe": "16d8",
+      "dado_inspiracion": "d12",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Mejora de Puntuación de Característica",
+          "descripcion": "Ganas el don de Mejora de Puntuación de Característica u otro don de tu elección para el que califiques.",
+          "type": "ASI"
+        }
+      ]
+    },
+    {
+      "nivel": 17,
+      "bonificador_por_competencia": "+6",
+      "dados_de_golpe": "17d8",
+      "dado_inspiracion": "d12",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Mejora de Lanzamiento de Hechizos",
+          "descripcion": "Tu poder mágico aumenta. Ganas acceso a espacios de conjuro de nivel 9."
+        }
+      ]
+    },
+    {
+      "nivel": 18,
+      "bonificador_por_competencia": "+6",
+      "dados_de_golpe": "18d8",
+      "dado_inspiracion": "d12",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Inspiración Superior",
+          "descripcion": "Cuando tiras Iniciativa, recuperas usos gastados de Inspiración Bárdica hasta tener dos si tienes menos de eso."
+        }
+      ]
+    },
+    {
+      "nivel": 19,
+      "bonificador_por_competencia": "+6",
+      "dados_de_golpe": "19d8",
+      "dado_inspiracion": "d12",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Don Épico",
+          "descripcion": "Ganas un don Épico u otro don de tu elección para el que califiques. Se recomienda el Don de Recuperación de Hechizos."
+        }
+      ]
+    },
+    {
+      "nivel": 20,
+      "bonificador_por_competencia": "+6",
+      "dados_de_golpe": "20d8",
+      "dado_inspiracion": "d12",
+      "cantrips_conocidos": 4,
+      "rasgos": [
+        {
+          "nombre": "Palabras de la Creación",
+          "descripcion": "Has dominado dos de las Palabras de la Creación: las palabras de la vida y la muerte. Por lo tanto, siempre tienes preparados los hechizos 'Palabra de Poder Sanar' y 'Palabra de Poder Matar'. Cuando lanzas cualquiera de los dos hechizos, puedes apuntar a una segunda criatura con él si esa criatura está a 10 pies del primer objetivo."
+        }
+      ]
+    }
+  ]
+}
