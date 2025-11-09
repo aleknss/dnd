@@ -167,7 +167,7 @@ export default function ClassPage() {
           <div className="w-full flex flex-col gap-12">
             <div className="flex flex-col 2xl:flex-row gap-5">
               <div className="md:w-auto m-auto shrink-0">
-                <InfoTable data={infoTableData} />
+                <InfoTable data={infoTableData} classType={id} />
               </div>
               <div id="traits" className="flex flex-col">
                 <h2 className="text-2xl font-inknut text-blue-dark">Rasgos</h2>

@@ -1,14 +1,27 @@
 import React from "react";
 import barbarianEquipment from "../assets/classes/barbarian/barbarian-equipment.jpg";
+import bardEquipment from "../assets/classes/bard/bard-equipment.jpg";
 
 interface InfoTableProps {
   data: Array<{
     label: string;
     value: React.ReactNode;
   }>;
+  classType?: string;
 }
 
-export default function InfoTable({ data }: InfoTableProps) {
+const equipmentImages: Record<string, string> = {
+  barbarian: barbarianEquipment,
+  bard: bardEquipment,
+};
+
+export default function InfoTable({
+  data,
+  classType = "barbarian",
+}: InfoTableProps) {
+  const displayedImage =
+    equipmentImages[classType.toLowerCase()] || barbarianEquipment;
+
   return (
     <div className="max-w-[640px] bg-dirty-white p-2.5 rounded-sm">
       {data.map((item, index) => (
@@ -26,7 +39,7 @@ export default function InfoTable({ data }: InfoTableProps) {
           </div>
         </div>
       ))}
-      <img src={barbarianEquipment} alt="Equipamiento" />
+      <img src={displayedImage} alt="Equipamiento" />
     </div>
   );
 }
